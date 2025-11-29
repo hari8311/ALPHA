@@ -16,9 +16,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: radial-gradient(1200px 600px at 20% 20%, rgba(99,102,241,0.18) 0%, rgba(15,23,42,1) 35%),
-                radial-gradient(900px 500px at 80% 10%, rgba(236,72,153,0.12) 0%, rgba(15,23,42,1) 40%),
-                linear-gradient(135deg, var(--dark-bg) 0%, #1a1a2e 100%);
+    background: #0b1220; /* solid dark background */
     color: var(--text-light);
     line-height: 1.6;
     min-height: 100vh;
@@ -247,7 +245,7 @@ body {
 /* About Section */
 .about {
     padding: 4rem 5%;
-    background: rgba(30, 41, 59, 0.5);
+    background: rgba(17, 24, 39, 0.85);
 }
 
 .about-content {
