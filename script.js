@@ -6,8 +6,8 @@ const wallpapers = [
         category: "nature",
         resolution: "1920x1080",
         poster: "assets/posters/aurora.jpg",
-        thumbnail: "https://player.vimeo.com/external/370467553.sd.mp4?s=7c9e2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=164&oauth2_token_id=57447761",
-        videoUrl: "https://player.vimeo.com/external/370467553.sd.mp4?s=7c9e2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=164&oauth2_token_id=57447761"
+        thumbnail: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+        videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
     },
     {
         id: 2,
@@ -15,8 +15,8 @@ const wallpapers = [
         category: "abstract",
         resolution: "2560x1440",
         poster: "assets/posters/cosmic_waves.jpg",
-        thumbnail: "https://player.vimeo.com/external/458726168.sd.mp4?s=4f3e2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=164&oauth2_token_id=57447761",
-        videoUrl: "https://player.vimeo.com/external/458726168.sd.mp4?s=4f3e2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=164&oauth2_token_id=57447761"
+        thumbnail: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
+        videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"
     },
     {
         id: 3,
@@ -24,8 +24,8 @@ const wallpapers = [
         category: "space",
         resolution: "3840x2160",
         poster: "assets/posters/galaxy_spiral.jpg",
-        thumbnail: "https://player.vimeo.com/external/419603934.sd.mp4?s=8e9f2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=164&oauth2_token_id=57447761",
-        videoUrl: "https://player.vimeo.com/external/419603934.sd.mp4?s=8e9f2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=164&oauth2_token_id=57447761"
+        thumbnail: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
+        videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4"
     },
     {
         id: 4,
@@ -33,8 +33,8 @@ const wallpapers = [
         category: "nature",
         resolution: "1920x1080",
         poster: "assets/posters/ocean_waves.jpg",
-        thumbnail: "https://player.vimeo.com/external/370467553.sd.mp4?s=7c9e2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=165&oauth2_token_id=57447761",
-        videoUrl: "https://player.vimeo.com/external/370467553.sd.mp4?s=7c9e2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=165&oauth2_token_id=57447761"
+        thumbnail: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
+        videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4"
     },
     {
         id: 5,
@@ -42,8 +42,8 @@ const wallpapers = [
         category: "abstract",
         resolution: "2560x1440",
         poster: "assets/posters/fluid_gradient.jpg",
-        thumbnail: "https://player.vimeo.com/external/458726168.sd.mp4?s=4f3e2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=165&oauth2_token_id=57447761",
-        videoUrl: "https://player.vimeo.com/external/458726168.sd.mp4?s=4f3e2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=165&oauth2_token_id=57447761"
+        thumbnail: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4",
+        videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
     },
     {
         id: 6,
@@ -51,8 +51,8 @@ const wallpapers = [
         category: "minimal",
         resolution: "1920x1080",
         poster: "assets/posters/minimal_geometry.jpg",
-        thumbnail: "https://player.vimeo.com/external/419603934.sd.mp4?s=8e9f2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=165&oauth2_token_id=57447761",
-        videoUrl: "https://player.vimeo.com/external/419603934.sd.mp4?s=8e9f2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=165&oauth2_token_id=57447761"
+        thumbnail: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
+        videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4"
     },
     {
         id: 7,
@@ -60,8 +60,8 @@ const wallpapers = [
         category: "space",
         resolution: "3840x2160",
         poster: "assets/posters/nebula_dream.jpg",
-        thumbnail: "https://player.vimeo.com/external/370467553.sd.mp4?s=7c9e2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=166&oauth2_token_id=57447761",
-        videoUrl: "https://player.vimeo.com/external/370467553.sd.mp4?s=7c9e2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=166&oauth2_token_id=57447761"
+        thumbnail: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackOnStreetAndDirt.mp4",
+        videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackOnStreetAndDirt.mp4"
     },
     {
         id: 8,
@@ -69,8 +69,8 @@ const wallpapers = [
         category: "nature",
         resolution: "2560x1440",
         poster: "assets/posters/forest_rain.jpg",
-        thumbnail: "https://player.vimeo.com/external/458726168.sd.mp4?s=4f3e2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=166&oauth2_token_id=57447761",
-        videoUrl: "https://player.vimeo.com/external/458726168.sd.mp4?s=4f3e2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=166&oauth2_token_id=57447761"
+        thumbnail: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
+        videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4"
     },
     {
         id: 9,
@@ -78,8 +78,8 @@ const wallpapers = [
         category: "abstract",
         resolution: "1920x1080",
         poster: "assets/posters/particle_flow.jpg",
-        thumbnail: "https://player.vimeo.com/external/419603934.sd.mp4?s=8e9f2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=166&oauth2_token_id=57447761",
-        videoUrl: "https://player.vimeo.com/external/419603934.sd.mp4?s=8e9f2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=166&oauth2_token_id=57447761"
+        thumbnail: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/VolkswagenGTIReview.mp4",
+        videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/VolkswagenGTIReview.mp4"
     },
     {
         id: 10,
@@ -87,8 +87,8 @@ const wallpapers = [
         category: "anime",
         resolution: "1920x1080",
         poster: "assets/posters/anime_city_night.jpg",
-        thumbnail: "https://player.vimeo.com/external/370467553.sd.mp4?s=7c9e2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=167&oauth2_token_id=57447761",
-        videoUrl: "https://player.vimeo.com/external/370467553.sd.mp4?s=7c9e2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=167&oauth2_token_id=57447761"
+        thumbnail: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4",
+        videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4"
     },
     {
         id: 11,
@@ -96,8 +96,8 @@ const wallpapers = [
         category: "anime",
         resolution: "2560x1440",
         poster: "assets/posters/sakura_dreams.jpg",
-        thumbnail: "https://player.vimeo.com/external/458726168.sd.mp4?s=4f3e2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=167&oauth2_token_id=57447761",
-        videoUrl: "https://player.vimeo.com/external/458726168.sd.mp4?s=4f3e2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=167&oauth2_token_id=57447761"
+        thumbnail: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4",
+        videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4"
     },
     {
         id: 12,
@@ -105,8 +105,8 @@ const wallpapers = [
         category: "anime",
         resolution: "3840x2160",
         poster: "assets/posters/neon_tokyo.jpg",
-        thumbnail: "https://player.vimeo.com/external/419603934.sd.mp4?s=8e9f2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=167&oauth2_token_id=57447761",
-        videoUrl: "https://player.vimeo.com/external/419603934.sd.mp4?s=8e9f2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=167&oauth2_token_id=57447761"
+        thumbnail: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+        videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
     },
     {
         id: 13,
