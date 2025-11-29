@@ -5,6 +5,7 @@ const wallpapers = [
         title: "Aurora Borealis",
         category: "nature",
         resolution: "1920x1080",
+        poster: "assets/posters/aurora.jpg",
         thumbnail: "https://player.vimeo.com/external/370467553.sd.mp4?s=7c9e2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=164&oauth2_token_id=57447761",
         videoUrl: "https://player.vimeo.com/external/370467553.sd.mp4?s=7c9e2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=164&oauth2_token_id=57447761"
     },
@@ -13,6 +14,7 @@ const wallpapers = [
         title: "Cosmic Waves",
         category: "abstract",
         resolution: "2560x1440",
+        poster: "assets/posters/cosmic_waves.jpg",
         thumbnail: "https://player.vimeo.com/external/458726168.sd.mp4?s=4f3e2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=164&oauth2_token_id=57447761",
         videoUrl: "https://player.vimeo.com/external/458726168.sd.mp4?s=4f3e2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=164&oauth2_token_id=57447761"
     },
@@ -21,6 +23,7 @@ const wallpapers = [
         title: "Galaxy Spiral",
         category: "space",
         resolution: "3840x2160",
+        poster: "assets/posters/galaxy_spiral.jpg",
         thumbnail: "https://player.vimeo.com/external/419603934.sd.mp4?s=8e9f2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=164&oauth2_token_id=57447761",
         videoUrl: "https://player.vimeo.com/external/419603934.sd.mp4?s=8e9f2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=164&oauth2_token_id=57447761"
     },
@@ -29,6 +32,7 @@ const wallpapers = [
         title: "Ocean Waves",
         category: "nature",
         resolution: "1920x1080",
+        poster: "assets/posters/ocean_waves.jpg",
         thumbnail: "https://player.vimeo.com/external/370467553.sd.mp4?s=7c9e2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=165&oauth2_token_id=57447761",
         videoUrl: "https://player.vimeo.com/external/370467553.sd.mp4?s=7c9e2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=165&oauth2_token_id=57447761"
     },
@@ -37,6 +41,7 @@ const wallpapers = [
         title: "Fluid Gradient",
         category: "abstract",
         resolution: "2560x1440",
+        poster: "assets/posters/fluid_gradient.jpg",
         thumbnail: "https://player.vimeo.com/external/458726168.sd.mp4?s=4f3e2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=165&oauth2_token_id=57447761",
         videoUrl: "https://player.vimeo.com/external/458726168.sd.mp4?s=4f3e2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=165&oauth2_token_id=57447761"
     },
@@ -45,6 +50,7 @@ const wallpapers = [
         title: "Minimal Geometry",
         category: "minimal",
         resolution: "1920x1080",
+        poster: "assets/posters/minimal_geometry.jpg",
         thumbnail: "https://player.vimeo.com/external/419603934.sd.mp4?s=8e9f2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=165&oauth2_token_id=57447761",
         videoUrl: "https://player.vimeo.com/external/419603934.sd.mp4?s=8e9f2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=165&oauth2_token_id=57447761"
     },
@@ -53,6 +59,7 @@ const wallpapers = [
         title: "Nebula Dream",
         category: "space",
         resolution: "3840x2160",
+        poster: "assets/posters/nebula_dream.jpg",
         thumbnail: "https://player.vimeo.com/external/370467553.sd.mp4?s=7c9e2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=166&oauth2_token_id=57447761",
         videoUrl: "https://player.vimeo.com/external/370467553.sd.mp4?s=7c9e2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=166&oauth2_token_id=57447761"
     },
@@ -61,6 +68,7 @@ const wallpapers = [
         title: "Forest Rain",
         category: "nature",
         resolution: "2560x1440",
+        poster: "assets/posters/forest_rain.jpg",
         thumbnail: "https://player.vimeo.com/external/458726168.sd.mp4?s=4f3e2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=166&oauth2_token_id=57447761",
         videoUrl: "https://player.vimeo.com/external/458726168.sd.mp4?s=4f3e2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=166&oauth2_token_id=57447761"
     },
@@ -69,6 +77,7 @@ const wallpapers = [
         title: "Particle Flow",
         category: "abstract",
         resolution: "1920x1080",
+        poster: "assets/posters/particle_flow.jpg",
         thumbnail: "https://player.vimeo.com/external/419603934.sd.mp4?s=8e9f2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=166&oauth2_token_id=57447761",
         videoUrl: "https://player.vimeo.com/external/419603934.sd.mp4?s=8e9f2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=166&oauth2_token_id=57447761"
     },
@@ -77,6 +86,7 @@ const wallpapers = [
         title: "Anime City Night",
         category: "anime",
         resolution: "1920x1080",
+        poster: "assets/posters/anime_city_night.jpg",
         thumbnail: "https://player.vimeo.com/external/370467553.sd.mp4?s=7c9e2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=167&oauth2_token_id=57447761",
         videoUrl: "https://player.vimeo.com/external/370467553.sd.mp4?s=7c9e2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=167&oauth2_token_id=57447761"
     },
@@ -85,6 +95,7 @@ const wallpapers = [
         title: "Sakura Dreams",
         category: "anime",
         resolution: "2560x1440",
+        poster: "assets/posters/sakura_dreams.jpg",
         thumbnail: "https://player.vimeo.com/external/458726168.sd.mp4?s=4f3e2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=167&oauth2_token_id=57447761",
         videoUrl: "https://player.vimeo.com/external/458726168.sd.mp4?s=4f3e2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=167&oauth2_token_id=57447761"
     },
@@ -93,6 +104,7 @@ const wallpapers = [
         title: "Neon Tokyo",
         category: "anime",
         resolution: "3840x2160",
+        poster: "assets/posters/neon_tokyo.jpg",
         thumbnail: "https://player.vimeo.com/external/419603934.sd.mp4?s=8e9f2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=167&oauth2_token_id=57447761",
         videoUrl: "https://player.vimeo.com/external/419603934.sd.mp4?s=8e9f2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=167&oauth2_token_id=57447761"
     },
@@ -101,10 +113,81 @@ const wallpapers = [
         title: "Dragon Ball",
         category: "anime",
         resolution: "1920x1080",
+        poster: "assets/posters/dragon_ball.jpg",
         thumbnail: "https://drive.google.com/uc?export=download&id=1-GlqyePwYvb4CgQZn9L3xRKK4Sz1PqfU",
         videoUrl: "https://drive.google.com/uc?export=download&id=1-GlqyePwYvb4CgQZn9L3xRKK4Sz1PqfU"
     }
 ];
+
+function createWallpaperCard(wallpaper) {
+    const card = document.createElement('div');
+    card.className = 'wallpaper-card';
+    card.setAttribute('data-category', wallpaper.category);
+
+    const posterAttr = wallpaper.poster ? `poster='${wallpaper.poster}'` : '';
+
+    card.innerHTML = `
+        <div class="wallpaper-thumbnail">
+            <video ${posterAttr} muted playsinline preload="none" data-src="${wallpaper.thumbnail}" loop></video>
+        </div>
+        <div class="wallpaper-info">
+            <h3>${wallpaper.title}</h3>
+            <span class="wallpaper-category">${wallpaper.category}</span>
+            <p class="wallpaper-resolution">${wallpaper.resolution}</p>
+        </div>
+    `;
+
+    card.addEventListener('click', () => openModal(wallpaper));
+    return card;
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    renderWallpapers(wallpapers);
+    setupEventListeners();
+    initBgVideo();
+    initWallpaperLazyPlayback();
+});
+
+function initWallpaperLazyPlayback() {
+    const cards = document.querySelectorAll('.wallpaper-card video');
+    if (!('IntersectionObserver' in window)) {
+        // Fallback: load all
+        cards.forEach(v => {
+            const src = v.getAttribute('data-src');
+            if (src) {
+                const sourceEl = document.createElement('source');
+                sourceEl.src = src;
+                sourceEl.type = 'video/mp4';
+                v.appendChild(sourceEl);
+                v.load();
+                v.play().catch(()=>{});
+            }
+        });
+        return;
+    }
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            const video = entry.target;
+            if (entry.isIntersecting) {
+                if (!video.dataset.loaded) {
+                    const src = video.getAttribute('data-src');
+                    if (src) {
+                        const sourceEl = document.createElement('source');
+                        sourceEl.src = src;
+                        sourceEl.type = 'video/mp4';
+                        video.appendChild(sourceEl);
+                        video.dataset.loaded = 'true';
+                        video.load();
+                    }
+                }
+                video.play().catch(()=>{});
+            } else {
+                video.pause();
+            }
+        });
+    }, { threshold: 0.25 });
+    cards.forEach(v => observer.observe(v));
+}
 
 // DOM Elements
 const wallpaperGrid = document.getElementById('wallpaperGrid');
@@ -123,11 +206,6 @@ let currentFilter = 'all';
 let currentWallpaper = null;
 
 // Initialize
-document.addEventListener('DOMContentLoaded', () => {
-    renderWallpapers(wallpapers);
-    setupEventListeners();
-    initBgVideo();
-});
 
 // Render wallpapers
 function renderWallpapers(wallpapersToRender) {
@@ -139,29 +217,6 @@ function renderWallpapers(wallpapersToRender) {
     });
 }
 
-// Create wallpaper card
-function createWallpaperCard(wallpaper) {
-    const card = document.createElement('div');
-    card.className = 'wallpaper-card';
-    card.setAttribute('data-category', wallpaper.category);
-    
-    card.innerHTML = `
-        <div class="wallpaper-thumbnail">
-            <video autoplay loop muted playsinline preload="metadata">
-                <source src="${wallpaper.thumbnail}" type="video/mp4">
-            </video>
-        </div>
-        <div class="wallpaper-info">
-            <h3>${wallpaper.title}</h3>
-            <span class="wallpaper-category">${wallpaper.category}</span>
-            <p class="wallpaper-resolution">${wallpaper.resolution}</p>
-        </div>
-    `;
-    
-    card.addEventListener('click', () => openModal(wallpaper));
-    
-    return card;
-}
 
 // Filter wallpapers
 function filterWallpapers(category) {
