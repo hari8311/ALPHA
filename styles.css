@@ -16,7 +16,9 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, var(--dark-bg) 0%, #1a1a2e 100%);
+    background: radial-gradient(1200px 600px at 20% 20%, rgba(99,102,241,0.18) 0%, rgba(15,23,42,1) 35%),
+                radial-gradient(900px 500px at 80% 10%, rgba(236,72,153,0.12) 0%, rgba(15,23,42,1) 40%),
+                linear-gradient(135deg, var(--dark-bg) 0%, #1a1a2e 100%);
     color: var(--text-light);
     line-height: 1.6;
     min-height: 100vh;
@@ -24,16 +26,18 @@ body {
 
 /* Navbar */
 .navbar {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
     align-items: center;
-    padding: 1.5rem 5%;
-    background: rgba(30, 41, 59, 0.8);
-    backdrop-filter: blur(10px);
+    gap: 1rem;
+    padding: 1rem 5%;
+    background: rgba(30, 41, 59, 0.55);
+    backdrop-filter: saturate(150%) blur(12px);
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    border-bottom: 1px solid rgba(148,163,184,0.12);
 }
 
 .brand { display: inline-flex; align-items: center; text-decoration: none; }
@@ -42,25 +46,67 @@ body {
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 .nav-links a {
     color: var(--text-light);
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s;
+    padding: 0.5rem 0.75rem;
+    border-radius: 8px;
+    transition: color 0.2s, background 0.2s;
 }
 
 .nav-links a:hover {
-    color: var(--primary-color);
+    color: #fff;
+    background: rgba(99,102,241,0.18);
+}
+.nav-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.search {
+    position: relative;
+    width: 280px;
+    max-width: 40vw;
+}
+
+.search input {
+    width: 100%;
+    padding: 0.6rem 2.4rem 0.6rem 0.9rem;
+    border-radius: 10px;
+    border: 1px solid rgba(148,163,184,0.25);
+    background: rgba(2,6,23,0.6);
+    color: var(--text-light);
+    outline: none;
+    transition: border 0.2s, box-shadow 0.2s;
+}
+
+.search input::placeholder { color: rgba(148,163,184,0.8); }
+
+.search input:focus {
+    border-color: rgba(99,102,241,0.5);
+    box-shadow: 0 0 0 4px rgba(99,102,241,0.15);
+}
+
+.search-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.8;
 }
 
 /* Hero Section */
 .hero {
     text-align: center;
     padding: 8rem 5% 6rem;
-    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(236, 72, 153, 0.1) 100%);
+    background:
+      radial-gradient(800px 400px at 20% 60%, rgba(99,102,241,0.15) 0%, rgba(255,255,255,0) 60%),
+      radial-gradient(800px 400px at 80% 40%, rgba(236,72,153,0.12) 0%, rgba(255,255,255,0) 60%);
 }
 
 .hero-content h2 {
@@ -143,17 +189,19 @@ body {
 }
 
 .wallpaper-card {
-    background: var(--card-bg);
+    background: linear-gradient(180deg, rgba(30,41,59,0.9) 0%, rgba(30,41,59,0.7) 100%);
     border-radius: 15px;
     overflow: hidden;
     cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border 0.25s ease;
     position: relative;
+    border: 1px solid rgba(148,163,184,0.12);
 }
 
 .wallpaper-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.25);
+    border-color: rgba(99,102,241,0.24);
 }
 
 .wallpaper-thumbnail {
@@ -294,9 +342,10 @@ body {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 2rem;
-    background: var(--card-bg);
+    background: linear-gradient(180deg, rgba(30,41,59,0.95) 0%, rgba(30,41,59,0.85) 100%);
     border-radius: 15px;
     overflow: hidden;
+    border: 1px solid rgba(148,163,184,0.12);
 }
 
 #modalVideo {
@@ -359,6 +408,8 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .nav-actions { order: 3; width: 100%; }
+    .search { width: 100%; max-width: none; }
     .hero-content h2 {
         font-size: 2.5rem;
     }

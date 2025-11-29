@@ -77,6 +77,7 @@ const wallpapers = [
 // DOM Elements
 const wallpaperGrid = document.getElementById('wallpaperGrid');
 const filterButtons = document.querySelectorAll('.filter-btn');
+const searchInput = document.getElementById('searchInput');
 const modal = document.getElementById('previewModal');
 const modalVideo = document.getElementById('modalVideo');
 const modalTitle = document.getElementById('modalTitle');
@@ -132,12 +133,12 @@ function createWallpaperCard(wallpaper) {
 function filterWallpapers(category) {
     currentFilter = category;
     
-    if (category === 'all') {
-        renderWallpapers(wallpapers);
-    } else {
-        const filtered = wallpapers.filter(w => w.category === category);
-        renderWallpapers(filtered);
-    }
+    const base = category === 'all' ? wallpapers : wallpapers.filter(w => w.category === category);
+    const term = (searchInput?.value || '').trim().toLowerCase();
+    const filteredBySearch = term
+        ? base.filter(w => w.title.toLowerCase().includes(term) || w.category.toLowerCase().includes(term))
+        : base;
+    renderWallpapers(filteredBySearch);
 }
 
 // Open modal
@@ -236,6 +237,11 @@ function setupEventListeners() {
             }
         });
     });
+
+    // Search input
+    if (searchInput) {
+        searchInput.addEventListener('input', () => filterWallpapers(currentFilter));
+    }
 }
 
 // Add CSS animations
