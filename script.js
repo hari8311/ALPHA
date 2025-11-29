@@ -241,9 +241,16 @@ function openModal(wallpaper) {
     modal.style.display = 'block';
     document.body.style.overflow = 'hidden';
     
-    // Play video after setting source
-    modalVideo.load();
-    modalVideo.play().catch(err => console.log('Video play failed:', err));
+    // Ensure video loads and plays
+    setTimeout(() => {
+        modalVideo.load();
+        const playPromise = modalVideo.play();
+        if (playPromise !== undefined) {
+            playPromise.catch(err => {
+                console.log('Autoplay prevented, user must click play:', err);
+            });
+        }
+    }, 100);
 }
 
 // Close modal
