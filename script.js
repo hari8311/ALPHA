@@ -240,6 +240,10 @@ function openModal(wallpaper) {
     modalResolution.textContent = `Resolution: ${wallpaper.resolution}`;
     modal.style.display = 'block';
     document.body.style.overflow = 'hidden';
+    
+    // Play video after setting source
+    modalVideo.load();
+    modalVideo.play().catch(err => console.log('Video play failed:', err));
 }
 
 // Close modal
