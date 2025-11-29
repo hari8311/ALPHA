@@ -1,4 +1,4 @@
-# LiveWalls - Live Wallpaper Website
+# ALPHA - LiveWalls
 
 A modern, responsive website for viewing and downloading live wallpapers.
 
