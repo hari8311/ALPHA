@@ -236,14 +236,9 @@ function openModal(wallpaper) {
     currentWallpaper = wallpaper;
     
     // Clear previous video
+    modalVideo.pause();
     modalVideo.innerHTML = '';
     modalVideo.removeAttribute('src');
-    
-    // Set new video source using source element
-    const source = document.createElement('source');
-    source.src = wallpaper.videoUrl;
-    source.type = 'video/mp4';
-    modalVideo.appendChild(source);
     
     modalTitle.textContent = wallpaper.title;
     modalCategory.textContent = `Category: ${wallpaper.category}`;
@@ -251,16 +246,31 @@ function openModal(wallpaper) {
     modal.style.display = 'block';
     document.body.style.overflow = 'hidden';
     
-    // Load and attempt to play
+    // Set video source directly
+    modalVideo.src = wallpaper.videoUrl;
+    
+    // Add error handler
+    modalVideo.onerror = function(e) {
+        console.error('Video loading error:', e);
+        alert('Unable to load video. The video URL may not be accessible.');
+    };
+    
+    // Load and play
     modalVideo.load();
+    
+    // Try to play after a short delay
     setTimeout(() => {
         const playPromise = modalVideo.play();
         if (playPromise !== undefined) {
-            playPromise.catch(err => {
-                console.log('Autoplay prevented, click play button:', err);
-            });
+            playPromise
+                .then(() => {
+                    console.log('Video playing successfully');
+                })
+                .catch(err => {
+                    console.log('Autoplay prevented. Click the play button to start.', err);
+                });
         }
-    }, 200);
+    }, 300);
 }
 
 // Close modal
