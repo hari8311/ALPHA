@@ -6,8 +6,8 @@ const wallpapers = [
         category: "nature",
         resolution: "1920x1080",
         poster: "assets/posters/aurora.jpg",
-        thumbnail: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
-        videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+        thumbnail: "https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/360/Big_Buck_Bunny_360_10s_1MB.mp4",
+        videoUrl: "https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/360/Big_Buck_Bunny_360_10s_1MB.mp4"
     },
     {
         id: 2,
@@ -15,8 +15,8 @@ const wallpapers = [
         category: "abstract",
         resolution: "2560x1440",
         poster: "assets/posters/cosmic_waves.jpg",
-        thumbnail: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
-        videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"
+        thumbnail: "https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/720/Big_Buck_Bunny_720_10s_1MB.mp4",
+        videoUrl: "https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/720/Big_Buck_Bunny_720_10s_1MB.mp4"
     },
     {
         id: 3,
@@ -24,8 +24,8 @@ const wallpapers = [
         category: "space",
         resolution: "3840x2160",
         poster: "assets/posters/galaxy_spiral.jpg",
-        thumbnail: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
-        videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4"
+        thumbnail: "https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/1080/Big_Buck_Bunny_1080_10s_1MB.mp4",
+        videoUrl: "https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/1080/Big_Buck_Bunny_1080_10s_1MB.mp4"
     },
     {
         id: 4,
@@ -33,8 +33,8 @@ const wallpapers = [
         category: "nature",
         resolution: "1920x1080",
         poster: "assets/posters/ocean_waves.jpg",
-        thumbnail: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
-        videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4"
+        thumbnail: "https://test-videos.co.uk/vids/jellyfish/mp4/h264/360/Jellyfish_360_10s_1MB.mp4",
+        videoUrl: "https://test-videos.co.uk/vids/jellyfish/mp4/h264/360/Jellyfish_360_10s_1MB.mp4"
     },
     {
         id: 5,
@@ -42,8 +42,8 @@ const wallpapers = [
         category: "abstract",
         resolution: "2560x1440",
         poster: "assets/posters/fluid_gradient.jpg",
-        thumbnail: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4",
-        videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
+        thumbnail: "https://test-videos.co.uk/vids/jellyfish/mp4/h264/720/Jellyfish_720_10s_1MB.mp4",
+        videoUrl: "https://test-videos.co.uk/vids/jellyfish/mp4/h264/720/Jellyfish_720_10s_1MB.mp4"
     },
     {
         id: 6,
@@ -51,8 +51,8 @@ const wallpapers = [
         category: "minimal",
         resolution: "1920x1080",
         poster: "assets/posters/minimal_geometry.jpg",
-        thumbnail: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
-        videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4"
+        thumbnail: "https://test-videos.co.uk/vids/jellyfish/mp4/h264/1080/Jellyfish_1080_10s_1MB.mp4",
+        videoUrl: "https://test-videos.co.uk/vids/jellyfish/mp4/h264/1080/Jellyfish_1080_10s_1MB.mp4"
     },
     {
         id: 7,
@@ -60,8 +60,8 @@ const wallpapers = [
         category: "space",
         resolution: "3840x2160",
         poster: "assets/posters/nebula_dream.jpg",
-        thumbnail: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackOnStreetAndDirt.mp4",
-        videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackOnStreetAndDirt.mp4"
+        thumbnail: "https://test-videos.co.uk/vids/sintel/mp4/h264/360/Sintel_360_10s_1MB.mp4",
+        videoUrl: "https://test-videos.co.uk/vids/sintel/mp4/h264/360/Sintel_360_10s_1MB.mp4"
     },
     {
         id: 8,
@@ -69,8 +69,8 @@ const wallpapers = [
         category: "nature",
         resolution: "2560x1440",
         poster: "assets/posters/forest_rain.jpg",
-        thumbnail: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
-        videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4"
+        thumbnail: "https://test-videos.co.uk/vids/sintel/mp4/h264/720/Sintel_720_10s_1MB.mp4",
+        videoUrl: "https://test-videos.co.uk/vids/sintel/mp4/h264/720/Sintel_720_10s_1MB.mp4"
     },
     {
         id: 9,
@@ -78,8 +78,8 @@ const wallpapers = [
         category: "abstract",
         resolution: "1920x1080",
         poster: "assets/posters/particle_flow.jpg",
-        thumbnail: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/VolkswagenGTIReview.mp4",
-        videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/VolkswagenGTIReview.mp4"
+        thumbnail: "https://test-videos.co.uk/vids/sintel/mp4/h264/1080/Sintel_1080_10s_1MB.mp4",
+        videoUrl: "https://test-videos.co.uk/vids/sintel/mp4/h264/1080/Sintel_1080_10s_1MB.mp4"
     },
     {
         id: 10,
@@ -87,8 +87,8 @@ const wallpapers = [
         category: "anime",
         resolution: "1920x1080",
         poster: "assets/posters/anime_city_night.jpg",
-        thumbnail: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4",
-        videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4"
+        thumbnail: "https://test-videos.co.uk/vids/tears/mp4/h264/360/Tears_360_10s_1MB.mp4",
+        videoUrl: "https://test-videos.co.uk/vids/tears/mp4/h264/360/Tears_360_10s_1MB.mp4"
     },
     {
         id: 11,
@@ -96,8 +96,8 @@ const wallpapers = [
         category: "anime",
         resolution: "2560x1440",
         poster: "assets/posters/sakura_dreams.jpg",
-        thumbnail: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4",
-        videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4"
+        thumbnail: "https://test-videos.co.uk/vids/tears/mp4/h264/720/Tears_720_10s_1MB.mp4",
+        videoUrl: "https://test-videos.co.uk/vids/tears/mp4/h264/720/Tears_720_10s_1MB.mp4"
     },
     {
         id: 12,
@@ -105,8 +105,8 @@ const wallpapers = [
         category: "anime",
         resolution: "3840x2160",
         poster: "assets/posters/neon_tokyo.jpg",
-        thumbnail: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
-        videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+        thumbnail: "https://test-videos.co.uk/vids/tears/mp4/h264/1080/Tears_1080_10s_1MB.mp4",
+        videoUrl: "https://test-videos.co.uk/vids/tears/mp4/h264/1080/Tears_1080_10s_1MB.mp4"
     },
     {
         id: 13,
