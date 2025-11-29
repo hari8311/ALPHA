@@ -124,7 +124,8 @@ function createWallpaperCard(wallpaper) {
     card.className = 'wallpaper-card';
     card.setAttribute('data-category', wallpaper.category);
 
-    const posterAttr = wallpaper.poster ? `poster='${wallpaper.poster}'` : '';
+    const posterSrc = wallpaper.poster || 'assets/logo.jpg';
+    const posterAttr = `poster='${posterSrc}'`;
 
     card.innerHTML = `
         <div class="wallpaper-thumbnail">
