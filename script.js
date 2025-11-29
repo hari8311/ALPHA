@@ -234,29 +234,41 @@ function filterWallpapers(category) {
 // Open modal
 function openModal(wallpaper) {
     currentWallpaper = wallpaper;
-    modalVideo.src = wallpaper.videoUrl;
+    
+    // Clear previous video
+    modalVideo.innerHTML = '';
+    modalVideo.removeAttribute('src');
+    
+    // Set new video source using source element
+    const source = document.createElement('source');
+    source.src = wallpaper.videoUrl;
+    source.type = 'video/mp4';
+    modalVideo.appendChild(source);
+    
     modalTitle.textContent = wallpaper.title;
     modalCategory.textContent = `Category: ${wallpaper.category}`;
     modalResolution.textContent = `Resolution: ${wallpaper.resolution}`;
     modal.style.display = 'block';
     document.body.style.overflow = 'hidden';
     
-    // Ensure video loads and plays
+    // Load and attempt to play
+    modalVideo.load();
     setTimeout(() => {
-        modalVideo.load();
         const playPromise = modalVideo.play();
         if (playPromise !== undefined) {
             playPromise.catch(err => {
-                console.log('Autoplay prevented, user must click play:', err);
+                console.log('Autoplay prevented, click play button:', err);
             });
         }
-    }, 100);
+    }, 200);
 }
 
 // Close modal
 function closeModal() {
     modal.style.display = 'none';
-    modalVideo.src = '';
+    modalVideo.pause();
+    modalVideo.innerHTML = '';
+    modalVideo.removeAttribute('src');
     currentWallpaper = null;
     document.body.style.overflow = 'auto';
 }

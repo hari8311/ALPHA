@@ -393,9 +393,11 @@ body {
 #modalVideo {
     width: 100%;
     height: auto;
+    min-height: 400px;
     max-height: 85vh;
     object-fit: contain;
     background: #000;
+    display: block;
 }
 
 .modal-info {
