@@ -85,6 +85,7 @@ const modalCategory = document.getElementById('modalCategory');
 const modalResolution = document.getElementById('modalResolution');
 const downloadBtn = document.getElementById('downloadBtn');
 const closeBtn = document.querySelector('.close');
+const bgVideo = document.getElementById('bgVideo');
 
 let currentFilter = 'all';
 let currentWallpaper = null;
@@ -93,6 +94,7 @@ let currentWallpaper = null;
 document.addEventListener('DOMContentLoaded', () => {
     renderWallpapers(wallpapers);
     setupEventListeners();
+    initBgVideo();
 });
 
 // Render wallpapers
@@ -242,6 +244,25 @@ function setupEventListeners() {
     if (searchInput) {
         searchInput.addEventListener('input', () => filterWallpapers(currentFilter));
     }
+}
+
+// Initialize background video playback speed and autoplay handling
+function initBgVideo() {
+    if (!bgVideo) return;
+    // Reduce playback speed for calmer motion
+    try { bgVideo.playbackRate = 0.6; } catch (e) {}
+    // Ensure autoplay on some mobile browsers
+    const play = () => {
+        const p = bgVideo.play();
+        if (p && typeof p.then === 'function') {
+            p.catch(() => { /* ignore autoplay block */ });
+        }
+    };
+    bgVideo.muted = true;
+    play();
+    document.addEventListener('visibilitychange', () => {
+        if (document.hidden) { bgVideo.pause(); } else { play(); }
+    });
 }
 
 // Add CSS animations
