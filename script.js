@@ -147,7 +147,7 @@ function createWallpaperCard(wallpaper) {
     
     card.innerHTML = `
         <div class="wallpaper-thumbnail">
-            <video autoplay loop muted playsinline>
+            <video autoplay loop muted playsinline preload="metadata">
                 <source src="${wallpaper.thumbnail}" type="video/mp4">
             </video>
         </div>
