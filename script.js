@@ -71,6 +71,30 @@ const wallpapers = [
         resolution: "1920x1080",
         thumbnail: "https://player.vimeo.com/external/419603934.sd.mp4?s=8e9f2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=166&oauth2_token_id=57447761",
         videoUrl: "https://player.vimeo.com/external/419603934.sd.mp4?s=8e9f2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=166&oauth2_token_id=57447761"
+    },
+    {
+        id: 10,
+        title: "Anime City Night",
+        category: "anime",
+        resolution: "1920x1080",
+        thumbnail: "https://player.vimeo.com/external/370467553.sd.mp4?s=7c9e2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=167&oauth2_token_id=57447761",
+        videoUrl: "https://player.vimeo.com/external/370467553.sd.mp4?s=7c9e2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=167&oauth2_token_id=57447761"
+    },
+    {
+        id: 11,
+        title: "Sakura Dreams",
+        category: "anime",
+        resolution: "2560x1440",
+        thumbnail: "https://player.vimeo.com/external/458726168.sd.mp4?s=4f3e2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=167&oauth2_token_id=57447761",
+        videoUrl: "https://player.vimeo.com/external/458726168.sd.mp4?s=4f3e2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=167&oauth2_token_id=57447761"
+    },
+    {
+        id: 12,
+        title: "Neon Tokyo",
+        category: "anime",
+        resolution: "3840x2160",
+        thumbnail: "https://player.vimeo.com/external/419603934.sd.mp4?s=8e9f2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=167&oauth2_token_id=57447761",
+        videoUrl: "https://player.vimeo.com/external/419603934.sd.mp4?s=8e9f2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=167&oauth2_token_id=57447761"
     }
 ];
 
