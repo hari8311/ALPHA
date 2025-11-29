@@ -1,0 +1,266 @@
+// Sample wallpaper data
+const wallpapers = [
+    {
+        id: 1,
+        title: "Aurora Borealis",
+        category: "nature",
+        resolution: "1920x1080",
+        thumbnail: "https://player.vimeo.com/external/370467553.sd.mp4?s=7c9e2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=164&oauth2_token_id=57447761",
+        videoUrl: "https://player.vimeo.com/external/370467553.sd.mp4?s=7c9e2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=164&oauth2_token_id=57447761"
+    },
+    {
+        id: 2,
+        title: "Cosmic Waves",
+        category: "abstract",
+        resolution: "2560x1440",
+        thumbnail: "https://player.vimeo.com/external/458726168.sd.mp4?s=4f3e2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=164&oauth2_token_id=57447761",
+        videoUrl: "https://player.vimeo.com/external/458726168.sd.mp4?s=4f3e2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=164&oauth2_token_id=57447761"
+    },
+    {
+        id: 3,
+        title: "Galaxy Spiral",
+        category: "space",
+        resolution: "3840x2160",
+        thumbnail: "https://player.vimeo.com/external/419603934.sd.mp4?s=8e9f2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=164&oauth2_token_id=57447761",
+        videoUrl: "https://player.vimeo.com/external/419603934.sd.mp4?s=8e9f2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=164&oauth2_token_id=57447761"
+    },
+    {
+        id: 4,
+        title: "Ocean Waves",
+        category: "nature",
+        resolution: "1920x1080",
+        thumbnail: "https://player.vimeo.com/external/370467553.sd.mp4?s=7c9e2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=165&oauth2_token_id=57447761",
+        videoUrl: "https://player.vimeo.com/external/370467553.sd.mp4?s=7c9e2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=165&oauth2_token_id=57447761"
+    },
+    {
+        id: 5,
+        title: "Fluid Gradient",
+        category: "abstract",
+        resolution: "2560x1440",
+        thumbnail: "https://player.vimeo.com/external/458726168.sd.mp4?s=4f3e2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=165&oauth2_token_id=57447761",
+        videoUrl: "https://player.vimeo.com/external/458726168.sd.mp4?s=4f3e2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=165&oauth2_token_id=57447761"
+    },
+    {
+        id: 6,
+        title: "Minimal Geometry",
+        category: "minimal",
+        resolution: "1920x1080",
+        thumbnail: "https://player.vimeo.com/external/419603934.sd.mp4?s=8e9f2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=165&oauth2_token_id=57447761",
+        videoUrl: "https://player.vimeo.com/external/419603934.sd.mp4?s=8e9f2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=165&oauth2_token_id=57447761"
+    },
+    {
+        id: 7,
+        title: "Nebula Dream",
+        category: "space",
+        resolution: "3840x2160",
+        thumbnail: "https://player.vimeo.com/external/370467553.sd.mp4?s=7c9e2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=166&oauth2_token_id=57447761",
+        videoUrl: "https://player.vimeo.com/external/370467553.sd.mp4?s=7c9e2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=166&oauth2_token_id=57447761"
+    },
+    {
+        id: 8,
+        title: "Forest Rain",
+        category: "nature",
+        resolution: "2560x1440",
+        thumbnail: "https://player.vimeo.com/external/458726168.sd.mp4?s=4f3e2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=166&oauth2_token_id=57447761",
+        videoUrl: "https://player.vimeo.com/external/458726168.sd.mp4?s=4f3e2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=166&oauth2_token_id=57447761"
+    },
+    {
+        id: 9,
+        title: "Particle Flow",
+        category: "abstract",
+        resolution: "1920x1080",
+        thumbnail: "https://player.vimeo.com/external/419603934.sd.mp4?s=8e9f2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=166&oauth2_token_id=57447761",
+        videoUrl: "https://player.vimeo.com/external/419603934.sd.mp4?s=8e9f2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=166&oauth2_token_id=57447761"
+    }
+];
+
+// DOM Elements
+const wallpaperGrid = document.getElementById('wallpaperGrid');
+const filterButtons = document.querySelectorAll('.filter-btn');
+const modal = document.getElementById('previewModal');
+const modalVideo = document.getElementById('modalVideo');
+const modalTitle = document.getElementById('modalTitle');
+const modalCategory = document.getElementById('modalCategory');
+const modalResolution = document.getElementById('modalResolution');
+const downloadBtn = document.getElementById('downloadBtn');
+const closeBtn = document.querySelector('.close');
+
+let currentFilter = 'all';
+let currentWallpaper = null;
+
+// Initialize
+document.addEventListener('DOMContentLoaded', () => {
+    renderWallpapers(wallpapers);
+    setupEventListeners();
+});
+
+// Render wallpapers
+function renderWallpapers(wallpapersToRender) {
+    wallpaperGrid.innerHTML = '';
+    
+    wallpapersToRender.forEach(wallpaper => {
+        const card = createWallpaperCard(wallpaper);
+        wallpaperGrid.appendChild(card);
+    });
+}
+
+// Create wallpaper card
+function createWallpaperCard(wallpaper) {
+    const card = document.createElement('div');
+    card.className = 'wallpaper-card';
+    card.setAttribute('data-category', wallpaper.category);
+    
+    card.innerHTML = `
+        <div class="wallpaper-thumbnail">
+            <video autoplay loop muted playsinline>
+                <source src="${wallpaper.thumbnail}" type="video/mp4">
+            </video>
+        </div>
+        <div class="wallpaper-info">
+            <h3>${wallpaper.title}</h3>
+            <span class="wallpaper-category">${wallpaper.category}</span>
+            <p class="wallpaper-resolution">${wallpaper.resolution}</p>
+        </div>
+    `;
+    
+    card.addEventListener('click', () => openModal(wallpaper));
+    
+    return card;
+}
+
+// Filter wallpapers
+function filterWallpapers(category) {
+    currentFilter = category;
+    
+    if (category === 'all') {
+        renderWallpapers(wallpapers);
+    } else {
+        const filtered = wallpapers.filter(w => w.category === category);
+        renderWallpapers(filtered);
+    }
+}
+
+// Open modal
+function openModal(wallpaper) {
+    currentWallpaper = wallpaper;
+    modalVideo.src = wallpaper.videoUrl;
+    modalTitle.textContent = wallpaper.title;
+    modalCategory.textContent = `Category: ${wallpaper.category}`;
+    modalResolution.textContent = `Resolution: ${wallpaper.resolution}`;
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+}
+
+// Close modal
+function closeModal() {
+    modal.style.display = 'none';
+    modalVideo.src = '';
+    currentWallpaper = null;
+    document.body.style.overflow = 'auto';
+}
+
+// Download wallpaper
+function downloadWallpaper() {
+    if (!currentWallpaper) return;
+    
+    const link = document.createElement('a');
+    link.href = currentWallpaper.videoUrl;
+    link.download = `${currentWallpaper.title.replace(/\s+/g, '_')}.mp4`;
+    link.target = '_blank';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    
+    // Show download notification
+    showNotification('Download started!');
+}
+
+// Show notification
+function showNotification(message) {
+    const notification = document.createElement('div');
+    notification.textContent = message;
+    notification.style.cssText = `
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background: linear-gradient(45deg, #6366f1, #8b5cf6);
+        color: white;
+        padding: 1rem 2rem;
+        border-radius: 50px;
+        box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+        z-index: 10000;
+        animation: slideIn 0.3s ease-out;
+    `;
+    
+    document.body.appendChild(notification);
+    
+    setTimeout(() => {
+        notification.style.animation = 'slideOut 0.3s ease-out';
+        setTimeout(() => notification.remove(), 300);
+    }, 3000);
+}
+
+// Setup event listeners
+function setupEventListeners() {
+    // Filter buttons
+    filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterButtons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            filterWallpapers(btn.getAttribute('data-filter'));
+        });
+    });
+    
+    // Modal close
+    closeBtn.addEventListener('click', closeModal);
+    
+    window.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+    
+    // Download button
+    downloadBtn.addEventListener('click', downloadWallpaper);
+    
+    // Smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+}
+
+// Add CSS animations
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes slideIn {
+        from {
+            transform: translateX(400px);
+            opacity: 0;
+        }
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+    
+    @keyframes slideOut {
+        from {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        to {
+            transform: translateX(400px);
+            opacity: 0;
+        }
+    }
+`;
+document.head.appendChild(style);

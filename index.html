@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Wallpapers - View & Download</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>🎨 LiveWalls</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Stunning Live Wallpapers</h2>
+            <p>Discover and download beautiful animated wallpapers for your devices</p>
+            <a href="#gallery" class="cta-button">Explore Collection</a>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery">
+        <h2>Wallpaper Gallery</h2>
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="nature">Nature</button>
+            <button class="filter-btn" data-filter="abstract">Abstract</button>
+            <button class="filter-btn" data-filter="space">Space</button>
+            <button class="filter-btn" data-filter="minimal">Minimal</button>
+        </div>
+
+        <div class="wallpaper-grid" id="wallpaperGrid">
+            <!-- Wallpapers will be dynamically loaded here -->
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="about-content">
+            <h2>About LiveWalls</h2>
+            <p>We curate the finest collection of live wallpapers to bring life to your screens. 
+               Each wallpaper is carefully selected for quality and visual appeal.</p>
+            <div class="features">
+                <div class="feature">
+                    <span class="feature-icon">⚡</span>
+                    <h3>High Quality</h3>
+                    <p>Premium quality animations</p>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">📱</span>
+                    <h3>Multi-Device</h3>
+                    <p>Works on all devices</p>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">🆓</span>
+                    <h3>Free Download</h3>
+                    <p>All wallpapers are free</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for wallpaper preview -->
+    <div id="previewModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-body">
+                <video id="modalVideo" autoplay loop muted playsinline></video>
+                <div class="modal-info">
+                    <h3 id="modalTitle"></h3>
+                    <p id="modalCategory"></p>
+                    <p id="modalResolution"></p>
+                    <button id="downloadBtn" class="download-btn">
+                        <span>⬇</span> Download
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 LiveWalls. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
