@@ -95,6 +95,14 @@ const wallpapers = [
         resolution: "3840x2160",
         thumbnail: "https://player.vimeo.com/external/419603934.sd.mp4?s=8e9f2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=167&oauth2_token_id=57447761",
         videoUrl: "https://player.vimeo.com/external/419603934.sd.mp4?s=8e9f2f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f&profile_id=167&oauth2_token_id=57447761"
+    },
+    {
+        id: 13,
+        title: "Dragon Ball",
+        category: "anime",
+        resolution: "1920x1080",
+        thumbnail: "https://drive.google.com/uc?export=download&id=1-GlqyePwYvb4CgQZn9L3xRKK4Sz1PqfU",
+        videoUrl: "https://drive.google.com/uc?export=download&id=1-GlqyePwYvb4CgQZn9L3xRKK4Sz1PqfU"
     }
 ];
 
