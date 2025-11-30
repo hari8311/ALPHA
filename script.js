@@ -113,7 +113,7 @@ const wallpapers = [
         title: "Dragon Ball",
         category: "anime",
         resolution: "1920x1080",
-        poster: "assets/logo.jpg",
+        poster: "assets/posters/dragon_ball_frame3.jpg",
         thumbnail: "https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4",
         videoUrl: "https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
     }
