@@ -129,7 +129,7 @@ function createWallpaperCard(wallpaper) {
 
     card.innerHTML = `
         <div class="wallpaper-thumbnail">
-            <video ${posterAttr} muted playsinline preload="none" data-src="${wallpaper.thumbnail}" loop></video>
+            <video ${posterAttr} muted playsinline preload="none" data-src="${wallpaper.thumbnail}" loop crossorigin="anonymous" referrerpolicy="no-referrer"></video>
         </div>
         <div class="wallpaper-info">
             <h3>${wallpaper.title}</h3>
@@ -239,6 +239,12 @@ function openModal(wallpaper) {
     modalVideo.pause();
     modalVideo.innerHTML = '';
     modalVideo.removeAttribute('src');
+
+    // Ensure safe attributes for remote playback
+    try {
+        modalVideo.setAttribute('crossorigin', 'anonymous');
+        modalVideo.setAttribute('referrerpolicy', 'no-referrer');
+    } catch (_) {}
     
     modalTitle.textContent = wallpaper.title;
     modalCategory.textContent = `Category: ${wallpaper.category}`;
@@ -249,10 +255,11 @@ function openModal(wallpaper) {
     // Set video source directly
     modalVideo.src = wallpaper.videoUrl;
     
-    // Add error handler
-    modalVideo.onerror = function(e) {
-        console.error('Video loading error:', e);
-        alert('Unable to load video. The video URL may not be accessible.');
+    // Add error handler with diagnostics and graceful guidance
+    modalVideo.onerror = function() {
+        const mediaErr = modalVideo.error?.code;
+        console.error('Video loading error. MediaError code:', mediaErr, 'src:', wallpaper.videoUrl);
+        alert('Unable to load video. The video URL may block embeds or your network is restricting it. Use the Download button to open directly.');
     };
     
     // Load and play
