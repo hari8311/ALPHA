@@ -114,8 +114,8 @@ const wallpapers = [
         category: "anime",
         resolution: "1920x1080",
         poster: "assets/posters/dragon_ball_frame10.jpg",
-        thumbnail: "https://drive.google.com/uc?export=download&id=1-GlqyePwYvb4CgQZn9L3xRKK4Sz1PqfU",
-        videoUrl: "https://drive.google.com/uc?export=download&id=1-GlqyePwYvb4CgQZn9L3xRKK4Sz1PqfU"
+        thumbnail: "https://drive.google.com/uc?export=download&id=1X49oNBdYZJmC_GP18fS0G4dR7a4pC-1u",
+        videoUrl: "https://drive.google.com/uc?export=download&id=1X49oNBdYZJmC_GP18fS0G4dR7a4pC-1u"
     }
 ];
 
