@@ -244,6 +244,8 @@ function openModal(wallpaper) {
     try {
         modalVideo.setAttribute('crossorigin', 'anonymous');
         modalVideo.setAttribute('referrerpolicy', 'no-referrer');
+        modalVideo.muted = true; // allow reliable autoplay
+        modalVideo.autoplay = true;
     } catch (_) {}
     
     modalTitle.textContent = wallpaper.title;
@@ -262,22 +264,20 @@ function openModal(wallpaper) {
         alert('Unable to load video. The video URL may block embeds or your network is restricting it. Use the Download button to open directly.');
     };
     
-    // Load and play
-    modalVideo.load();
-    
-    // Try to play after a short delay
-    setTimeout(() => {
-        const playPromise = modalVideo.play();
-        if (playPromise !== undefined) {
-            playPromise
-                .then(() => {
-                    console.log('Video playing successfully');
-                })
-                .catch(err => {
-                    console.log('Autoplay prevented. Click the play button to start.', err);
-                });
+    // Load and play when ready
+    const attemptPlay = () => {
+        const p = modalVideo.play();
+        if (p && typeof p.then === 'function') {
+            p.catch(err => {
+                console.log('Autoplay prevented. Use the play button.', err);
+            });
         }
-    }, 300);
+    };
+
+    modalVideo.addEventListener('canplay', attemptPlay, { once: true });
+    modalVideo.load();
+    // Fallback attempt after a brief delay
+    setTimeout(attemptPlay, 400);
 }
 
 // Close modal
