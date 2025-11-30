@@ -196,6 +196,7 @@ const filterButtons = document.querySelectorAll('.filter-btn');
 const searchInput = document.getElementById('searchInput');
 const modal = document.getElementById('previewModal');
 const modalVideo = document.getElementById('modalVideo');
+let modalPlayer = null;
 const modalTitle = document.getElementById('modalTitle');
 const modalCategory = document.getElementById('modalCategory');
 const modalResolution = document.getElementById('modalResolution');
@@ -244,8 +245,6 @@ function openModal(wallpaper) {
     try {
         modalVideo.setAttribute('crossorigin', 'anonymous');
         modalVideo.setAttribute('referrerpolicy', 'no-referrer');
-        modalVideo.muted = true; // allow reliable autoplay
-        modalVideo.autoplay = true;
     } catch (_) {}
     
     modalTitle.textContent = wallpaper.title;
@@ -254,38 +253,50 @@ function openModal(wallpaper) {
     modal.style.display = 'block';
     document.body.style.overflow = 'hidden';
     
-    // Set video source directly
-    modalVideo.src = wallpaper.videoUrl;
+    // Initialize/Update Video.js player for robust playback
+    if (!modalPlayer) {
+        modalPlayer = videojs(modalVideo, {
+            autoplay: true,
+            muted: true,
+            controls: true,
+            preload: 'auto',
+            fluid: true
+        });
+        // Error diagnostics
+        modalPlayer.on('error', () => {
+            const err = modalPlayer.error();
+            console.error('Video.js error:', err);
+            alert('Unable to play this video in the page. Click Download to open it directly.');
+        });
+    }
+    modalPlayer.src({
+        src: wallpaper.videoUrl,
+        type: 'video/mp4'
+    });
     
-    // Add error handler with diagnostics and graceful guidance
-    modalVideo.onerror = function() {
-        const mediaErr = modalVideo.error?.code;
-        console.error('Video loading error. MediaError code:', mediaErr, 'src:', wallpaper.videoUrl);
-        alert('Unable to load video. The video URL may block embeds or your network is restricting it. Use the Download button to open directly.');
-    };
-    
-    // Load and play when ready
-    const attemptPlay = () => {
-        const p = modalVideo.play();
+    // Play when ready
+    modalPlayer.ready(() => {
+        const p = modalPlayer.play();
         if (p && typeof p.then === 'function') {
-            p.catch(err => {
-                console.log('Autoplay prevented. Use the play button.', err);
-            });
+            p.catch(() => {});
         }
-    };
-
-    modalVideo.addEventListener('canplay', attemptPlay, { once: true });
-    modalVideo.load();
-    // Fallback attempt after a brief delay
-    setTimeout(attemptPlay, 400);
+    });
 }
 
 // Close modal
 function closeModal() {
     modal.style.display = 'none';
-    modalVideo.pause();
-    modalVideo.innerHTML = '';
-    modalVideo.removeAttribute('src');
+    try {
+        if (modalPlayer) {
+            modalPlayer.pause();
+            modalPlayer.src({ src: '', type: 'video/mp4' });
+            // Do not dispose to preserve skin; reuse instance on next open
+        } else {
+            modalVideo.pause();
+            modalVideo.innerHTML = '';
+            modalVideo.removeAttribute('src');
+        }
+    } catch (_) {}
     currentWallpaper = null;
     document.body.style.overflow = 'auto';
 }

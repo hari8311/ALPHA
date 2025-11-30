@@ -400,6 +400,12 @@ body {
     display: block;
 }
 
+/* Ensure Video.js player fits modal layout */
+.video-js {
+    width: 100% !important;
+    max-height: 85vh;
+}
+
 .modal-info {
     padding: 2rem;
     display: flex;
