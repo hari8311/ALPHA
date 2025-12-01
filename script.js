@@ -6,8 +6,8 @@ const wallpapers = [
         category: "nature",
         resolution: "1920x1080",
         poster: "assets/posters/aurora.jpg",
-        thumbnail: "https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4",
-        videoUrl: "https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
+        thumbnail: "",
+        videoUrl: ""
     },
     {
         id: 2,
@@ -15,8 +15,8 @@ const wallpapers = [
         category: "abstract",
         resolution: "2560x1440",
         poster: "assets/posters/cosmic_waves.jpg",
-        thumbnail: "https://archive.org/download/ElephantsDream/ed_hd.mp4",
-        videoUrl: "https://archive.org/download/ElephantsDream/ed_hd.mp4"
+        thumbnail: "",
+        videoUrl: ""
     },
     {
         id: 3,
@@ -24,8 +24,8 @@ const wallpapers = [
         category: "space",
         resolution: "3840x2160",
         poster: "assets/posters/galaxy_spiral.jpg",
-        thumbnail: "https://archive.org/download/Sintel/sintel-2048-surround.mp4",
-        videoUrl: "https://archive.org/download/Sintel/sintel-2048-surround.mp4"
+        thumbnail: "",
+        videoUrl: ""
     },
     {
         id: 4,
@@ -33,8 +33,8 @@ const wallpapers = [
         category: "nature",
         resolution: "1920x1080",
         poster: "assets/posters/ocean_waves.jpg",
-        thumbnail: "https://archive.org/download/spring-5400/spring-5400_512kb.mp4",
-        videoUrl: "https://archive.org/download/spring-5400/spring-5400_512kb.mp4"
+        thumbnail: "",
+        videoUrl: ""
     },
     {
         id: 5,
@@ -42,8 +42,8 @@ const wallpapers = [
         category: "abstract",
         resolution: "2560x1440",
         poster: "assets/posters/fluid_gradient.jpg",
-        thumbnail: "https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4",
-        videoUrl: "https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
+        thumbnail: "",
+        videoUrl: ""
     },
     {
         id: 6,
@@ -51,8 +51,8 @@ const wallpapers = [
         category: "minimal",
         resolution: "1920x1080",
         poster: "assets/posters/minimal_geometry.jpg",
-        thumbnail: "https://archive.org/download/ElephantsDream/ed_hd.mp4",
-        videoUrl: "https://archive.org/download/ElephantsDream/ed_hd.mp4"
+        thumbnail: "",
+        videoUrl: ""
     },
     {
         id: 7,
@@ -60,8 +60,8 @@ const wallpapers = [
         category: "space",
         resolution: "3840x2160",
         poster: "assets/posters/nebula_dream.jpg",
-        thumbnail: "https://archive.org/download/Sintel/sintel-2048-surround.mp4",
-        videoUrl: "https://archive.org/download/Sintel/sintel-2048-surround.mp4"
+        thumbnail: "",
+        videoUrl: ""
     },
     {
         id: 8,
@@ -69,8 +69,8 @@ const wallpapers = [
         category: "nature",
         resolution: "2560x1440",
         poster: "assets/posters/forest_rain.jpg",
-        thumbnail: "https://archive.org/download/spring-5400/spring-5400_512kb.mp4",
-        videoUrl: "https://archive.org/download/spring-5400/spring-5400_512kb.mp4"
+        thumbnail: "",
+        videoUrl: ""
     },
     {
         id: 9,
@@ -78,8 +78,8 @@ const wallpapers = [
         category: "abstract",
         resolution: "1920x1080",
         poster: "assets/posters/particle_flow.jpg",
-        thumbnail: "https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4",
-        videoUrl: "https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
+        thumbnail: "",
+        videoUrl: ""
     },
     {
         id: 10,
@@ -87,8 +87,8 @@ const wallpapers = [
         category: "anime",
         resolution: "1920x1080",
         poster: "assets/posters/anime_city_night.jpg",
-        thumbnail: "https://archive.org/download/ElephantsDream/ed_hd.mp4",
-        videoUrl: "https://archive.org/download/ElephantsDream/ed_hd.mp4"
+        thumbnail: "",
+        videoUrl: ""
     },
     {
         id: 11,
@@ -96,8 +96,8 @@ const wallpapers = [
         category: "anime",
         resolution: "2560x1440",
         poster: "assets/posters/sakura_dreams.jpg",
-        thumbnail: "https://archive.org/download/Sintel/sintel-2048-surround.mp4",
-        videoUrl: "https://archive.org/download/Sintel/sintel-2048-surround.mp4"
+        thumbnail: "",
+        videoUrl: ""
     },
     {
         id: 12,
@@ -105,8 +105,8 @@ const wallpapers = [
         category: "anime",
         resolution: "3840x2160",
         poster: "assets/posters/neon_tokyo.jpg",
-        thumbnail: "https://archive.org/download/spring-5400/spring-5400_512kb.mp4",
-        videoUrl: "https://archive.org/download/spring-5400/spring-5400_512kb.mp4"
+        thumbnail: "",
+        videoUrl: ""
     },
     {
         id: 13,
@@ -114,8 +114,8 @@ const wallpapers = [
         category: "anime",
         resolution: "1920x1080",
         poster: "assets/posters/dragon_ball_frame10.jpg",
-        thumbnail: "https://drive.google.com/uc?export=download&id=1X49oNBdYZJmC_GP18fS0G4dR7a4pC-1u",
-        videoUrl: "https://drive.google.com/uc?export=download&id=1X49oNBdYZJmC_GP18fS0G4dR7a4pC-1u"
+        thumbnail: "http://localhost:8080/s/pYwbHCcxLE4etWn/download",
+        videoUrl: "http://localhost:8080/s/pYwbHCcxLE4etWn/download"
     }
 ];
 
