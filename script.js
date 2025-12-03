@@ -114,8 +114,8 @@ const wallpapers = [
         category: "anime",
         resolution: "1920x1080",
         poster: "assets/posters/dragon_ball_frame10.jpg",
-        thumbnail: "http://localhost:8080/s/pYwbHCcxLE4etWn/download",
-        videoUrl: "http://localhost:8080/s/pYwbHCcxLE4etWn/download"
+        thumbnail: "",
+        videoUrl: ""
     }
 ];
 
@@ -196,6 +196,7 @@ const filterButtons = document.querySelectorAll('.filter-btn');
 const searchInput = document.getElementById('searchInput');
 const modal = document.getElementById('previewModal');
 const modalVideo = document.getElementById('modalVideo');
+let modalPlayer = null;
 const modalTitle = document.getElementById('modalTitle');
 const modalCategory = document.getElementById('modalCategory');
 const modalResolution = document.getElementById('modalResolution');
@@ -247,32 +248,54 @@ function openModal(wallpaper) {
     modal.style.display = 'block';
     document.body.style.overflow = 'hidden';
     
-    // Clear previous video
-    modalVideo.pause();
-    modalVideo.innerHTML = '';
-    modalVideo.removeAttribute('src');
+    // Dispose old player if exists
+    if (modalPlayer) {
+        try {
+            modalPlayer.dispose();
+            modalPlayer = null;
+        } catch (e) {
+            console.log('Player disposal error:', e);
+        }
+    }
     
-    // Create source element
-    const source = document.createElement('source');
-    source.src = wallpaper.videoUrl;
-    source.type = 'video/mp4';
-    modalVideo.appendChild(source);
+    // Create fresh Video.js player instance
+    modalPlayer = videojs(modalVideo, {
+        autoplay: true,
+        muted: true,
+        controls: true,
+        preload: 'auto',
+        fluid: true,
+        html5: {
+            vhs: {
+                overrideNative: true
+            },
+            nativeVideoTracks: false,
+            nativeAudioTracks: false,
+            nativeTextTracks: false
+        }
+    });
     
-    // Load and play
-    modalVideo.load();
+    // Set video source
+    modalPlayer.src({
+        src: wallpaper.videoUrl,
+        type: 'video/mp4'
+    });
     
     // Handle errors
-    modalVideo.onerror = function() {
-        console.error('Video loading error');
-        alert('Unable to load video. Please check your Nextcloud server is running or try downloading.');
-    };
+    modalPlayer.on('error', function() {
+        const error = modalPlayer.error();
+        console.error('Video error:', error);
+        if (error) {
+            alert(`Video playback error: ${error.message || 'Unknown error'}. Try downloading the file instead.`);
+        }
+    });
     
-    // Auto-play when loaded
-    modalVideo.onloadedmetadata = function() {
-        modalVideo.play().catch(function(err) {
+    // Auto-play when ready
+    modalPlayer.ready(function() {
+        modalPlayer.play().catch(function(err) {
             console.log('Autoplay prevented:', err);
         });
-    };
+    });
 }
 
 // Close modal
@@ -280,11 +303,16 @@ function closeModal() {
     modal.style.display = 'none';
     document.body.style.overflow = 'auto';
     
-    // Stop and clear video
-    modalVideo.pause();
-    modalVideo.innerHTML = '';
-    modalVideo.removeAttribute('src');
-    modalVideo.load();
+    // Properly dispose Video.js player
+    if (modalPlayer) {
+        try {
+            modalPlayer.pause();
+            modalPlayer.dispose();
+            modalPlayer = null;
+        } catch (e) {
+            console.log('Player cleanup error:', e);
+        }
+    }
     
     currentWallpaper = null;
 }

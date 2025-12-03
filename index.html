@@ -12,6 +12,8 @@
     <meta property="og:url" content="https://hari8311.github.io/ALPHA/">
     <title>Live Wallpapers - View & Download</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Video.js CSS -->
+    <link href="https://unpkg.com/video.js@8.10.0/dist/video-js.min.css" rel="stylesheet">
     <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
 </head>
 <body>
@@ -91,9 +93,7 @@
         <div class="modal-content">
             <span class="close">&times;</span>
             <div class="modal-body">
-                <video id="modalVideo" controls autoplay loop muted playsinline preload="auto" crossorigin="anonymous" referrerpolicy="no-referrer">
-                    Your browser does not support the video tag.
-                </video>
+                <video id="modalVideo" class="video-js vjs-default-skin" controls autoplay loop muted playsinline preload="auto" crossorigin="anonymous" referrerpolicy="no-referrer"></video>
                 <div class="modal-info">
                     <h3 id="modalTitle"></h3>
                     <p id="modalCategory"></p>
@@ -110,6 +110,8 @@
         <p>&copy; 2025 ALPHA. All rights reserved.</p>
     </footer>
 
+    <!-- Video.js JS -->
+    <script src="https://unpkg.com/video.js@8.10.0/dist/video.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
