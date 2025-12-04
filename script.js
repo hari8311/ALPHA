@@ -125,10 +125,11 @@ function createWallpaperCard(wallpaper) {
     card.setAttribute('data-category', wallpaper.category);
 
     const thumbnailUrl = wallpaper.thumbnail || wallpaper.videoUrl;
+    const videoSrcWithFrame = thumbnailUrl ? `${thumbnailUrl}#t=0.1` : '';
 
     card.innerHTML = `
         <div class="wallpaper-thumbnail">
-            <video muted playsinline preload="metadata" data-src="${thumbnailUrl}" loop crossorigin="anonymous" referrerpolicy="no-referrer">#t=0.1</video>
+            <video muted playsinline preload="metadata" data-src="${videoSrcWithFrame}" loop crossorigin="anonymous" referrerpolicy="no-referrer"></video>
         </div>
         <div class="wallpaper-info">
             <h3>${wallpaper.title}</h3>
@@ -267,9 +268,10 @@ function openModal(wallpaper) {
         }
     });
     
-    // Set video source
+    // Set video source with third frame as poster
+    const videoUrlWithFrame = wallpaper.videoUrl + '#t=0.1';
     modalPlayer.src({
-        src: wallpaper.videoUrl,
+        src: videoUrlWithFrame,
         type: 'video/mp4'
     });
     
