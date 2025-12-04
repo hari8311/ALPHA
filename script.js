@@ -156,8 +156,26 @@ function initWallpaperLazyPlayback() {
         cards.forEach(v => {
             const src = v.getAttribute('data-src');
             if (src) {
-                v.src = src;
+                // Remove fragment if exists
+                const cleanSrc = src.replace(/#t=[\d.]+$/, '');
+                v.src = cleanSrc;
                 v.load();
+                
+                // Capture third frame when loaded
+                v.addEventListener('loadeddata', function() {
+                    v.currentTime = 0.1;
+                }, { once: true });
+                
+                v.addEventListener('seeked', function() {
+                    // Create canvas to capture frame
+                    const canvas = document.createElement('canvas');
+                    canvas.width = v.videoWidth;
+                    canvas.height = v.videoHeight;
+                    const ctx = canvas.getContext('2d');
+                    ctx.drawImage(v, 0, 0);
+                    v.poster = canvas.toDataURL('image/jpeg', 0.92);
+                    v.currentTime = 0; // Reset to start
+                }, { once: true });
             }
         });
         return;
@@ -169,9 +187,25 @@ function initWallpaperLazyPlayback() {
                 if (!video.dataset.loaded) {
                     const src = video.getAttribute('data-src');
                     if (src) {
-                        video.src = src;
+                        const cleanSrc = src.replace(/#t=[\d.]+$/, '');
+                        video.src = cleanSrc;
                         video.dataset.loaded = 'true';
                         video.load();
+                        
+                        // Capture third frame
+                        video.addEventListener('loadeddata', function() {
+                            video.currentTime = 0.1;
+                        }, { once: true });
+                        
+                        video.addEventListener('seeked', function() {
+                            const canvas = document.createElement('canvas');
+                            canvas.width = video.videoWidth;
+                            canvas.height = video.videoHeight;
+                            const ctx = canvas.getContext('2d');
+                            ctx.drawImage(video, 0, 0);
+                            video.poster = canvas.toDataURL('image/jpeg', 0.92);
+                            video.currentTime = 0;
+                        }, { once: true });
                     }
                 }
                 video.play().catch(()=>{});
@@ -273,6 +307,23 @@ function openModal(wallpaper) {
     modalPlayer.src({
         src: videoUrlWithFrame,
         type: 'video/mp4'
+    });
+    
+    // Capture third frame for poster
+    modalPlayer.on('loadeddata', function() {
+        modalPlayer.currentTime(0.1);
+    });
+    
+    modalPlayer.on('seeked', function() {
+        const video = modalVideo;
+        const canvas = document.createElement('canvas');
+        canvas.width = video.videoWidth;
+        canvas.height = video.videoHeight;
+        const ctx = canvas.getContext('2d');
+        ctx.drawImage(video, 0, 0);
+        video.poster = canvas.toDataURL('image/jpeg', 0.92);
+        console.log('✓ Captured third frame for', wallpaper.title);
+        modalPlayer.currentTime(0);
     });
     
     // Handle errors
