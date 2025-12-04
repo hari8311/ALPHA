@@ -126,10 +126,11 @@ function createWallpaperCard(wallpaper) {
 
     const posterSrc = wallpaper.poster || 'assets/logo.jpg';
     const posterAttr = `poster='${posterSrc}'`;
+    const thumbnailUrl = wallpaper.thumbnail || wallpaper.videoUrl;
 
     card.innerHTML = `
         <div class="wallpaper-thumbnail">
-            <video ${posterAttr} muted playsinline preload="none" data-src="${wallpaper.thumbnail}" loop crossorigin="anonymous" referrerpolicy="no-referrer"></video>
+            <video ${posterAttr} muted playsinline preload="metadata" data-src="${thumbnailUrl}" loop crossorigin="anonymous" referrerpolicy="no-referrer"></video>
         </div>
         <div class="wallpaper-info">
             <h3>${wallpaper.title}</h3>
@@ -451,3 +452,28 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+// Capture video frame as poster (3rd frame at ~0.1s for 30fps video)
+function captureVideoFrame(videoElement, frameTime = 0.1) {
+    return new Promise((resolve) => {
+        const canvas = document.createElement('canvas');
+        const ctx = canvas.getContext('2d');
+        
+        if (!videoElement.videoWidth || !videoElement.videoHeight) {
+            videoElement.onloadedmetadata = () => {
+                canvas.width = videoElement.videoWidth;
+                canvas.height = videoElement.videoHeight;
+                videoElement.currentTime = frameTime;
+            };
+        } else {
+            canvas.width = videoElement.videoWidth;
+            canvas.height = videoElement.videoHeight;
+            videoElement.currentTime = frameTime;
+        }
+        
+        videoElement.oncanplay = () => {
+            ctx.drawImage(videoElement, 0, 0);
+            resolve(canvas.toDataURL('image/jpeg', 0.95));
+        };
+    });
+}
