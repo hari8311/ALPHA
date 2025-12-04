@@ -15,8 +15,8 @@ const wallpapers = [
         category: "abstract",
         resolution: "2560x1440",
         poster: "assets/posters/cosmic_waves.jpg",
-        thumbnail: "",
-        videoUrl: ""
+        thumbnail: "https://drive.google.com/uc?export=download&id=1x0g8VkS6cU1bqDzJfdTgUM_7p6mHgpot",
+        videoUrl: "https://drive.google.com/uc?export=download&id=1x0g8VkS6cU1bqDzJfdTgUM_7p6mHgpot"
     },
     {
         id: 3,
@@ -24,8 +24,8 @@ const wallpapers = [
         category: "space",
         resolution: "3840x2160",
         poster: "assets/posters/galaxy_spiral.jpg",
-        thumbnail: "",
-        videoUrl: ""
+        thumbnail: "https://drive.google.com/uc?export=download&id=1hP0O0PlJIAOE9oLnsSc1XZ0zbP7ba1bK",
+        videoUrl: "https://drive.google.com/uc?export=download&id=1hP0O0PlJIAOE9oLnsSc1XZ0zbP7ba1bK"
     },
     {
         id: 4,
@@ -33,8 +33,8 @@ const wallpapers = [
         category: "nature",
         resolution: "1920x1080",
         poster: "assets/posters/ocean_waves.jpg",
-        thumbnail: "",
-        videoUrl: ""
+        thumbnail: "https://drive.google.com/uc?export=download&id=11yMD0FwhjkJDGtDjso9bxZ7-m60dAEvk",
+        videoUrl: "https://drive.google.com/uc?export=download&id=11yMD0FwhjkJDGtDjso9bxZ7-m60dAEvk"
     },
     {
         id: 5,
@@ -42,8 +42,8 @@ const wallpapers = [
         category: "abstract",
         resolution: "2560x1440",
         poster: "assets/posters/fluid_gradient.jpg",
-        thumbnail: "",
-        videoUrl: ""
+        thumbnail: "https://drive.google.com/uc?export=download&id=1d3KTO8vWer20fUQ3a9Ujl7ZgX6uH0v_Q",
+        videoUrl: "https://drive.google.com/uc?export=download&id=1d3KTO8vWer20fUQ3a9Ujl7ZgX6uH0v_Q"
     },
     {
         id: 6,
@@ -51,8 +51,8 @@ const wallpapers = [
         category: "minimal",
         resolution: "1920x1080",
         poster: "assets/posters/minimal_geometry.jpg",
-        thumbnail: "",
-        videoUrl: ""
+        thumbnail: "https://drive.google.com/uc?export=download&id=1E9nfaeK_YDdlch2TMBA19r6fVhnpgi-I",
+        videoUrl: "https://drive.google.com/uc?export=download&id=1E9nfaeK_YDdlch2TMBA19r6fVhnpgi-I"
     },
     {
         id: 7,
@@ -60,8 +60,8 @@ const wallpapers = [
         category: "space",
         resolution: "3840x2160",
         poster: "assets/posters/nebula_dream.jpg",
-        thumbnail: "",
-        videoUrl: ""
+        thumbnail: "https://drive.google.com/uc?export=download&id=1HYy4BNEP2Aw36exNqQO9cQlsVh6YG0jq",
+        videoUrl: "https://drive.google.com/uc?export=download&id=1HYy4BNEP2Aw36exNqQO9cQlsVh6YG0jq"
     },
     {
         id: 8,
@@ -69,8 +69,8 @@ const wallpapers = [
         category: "nature",
         resolution: "2560x1440",
         poster: "assets/posters/forest_rain.jpg",
-        thumbnail: "",
-        videoUrl: ""
+        thumbnail: "https://drive.google.com/uc?export=download&id=11fIN1ijghmqmjvg5roD769oE1syrlK2C",
+        videoUrl: "https://drive.google.com/uc?export=download&id=11fIN1ijghmqmjvg5roD769oE1syrlK2C"
     },
     {
         id: 9,
@@ -78,8 +78,8 @@ const wallpapers = [
         category: "abstract",
         resolution: "1920x1080",
         poster: "assets/posters/particle_flow.jpg",
-        thumbnail: "",
-        videoUrl: ""
+        thumbnail: "https://drive.google.com/uc?export=download&id=16b5wx2jmqVTsV_WHOUC7V-AI2fAQpNH3",
+        videoUrl: "https://drive.google.com/uc?export=download&id=16b5wx2jmqVTsV_WHOUC7V-AI2fAQpNH3"
     },
     {
         id: 10,
@@ -87,8 +87,8 @@ const wallpapers = [
         category: "anime",
         resolution: "1920x1080",
         poster: "assets/posters/anime_city_night.jpg",
-        thumbnail: "",
-        videoUrl: ""
+        thumbnail: "https://drive.google.com/uc?export=download&id=1SPHbqi1P5rCQ2xeNRPRPalT02Un53W_t",
+        videoUrl: "https://drive.google.com/uc?export=download&id=1SPHbqi1P5rCQ2xeNRPRPalT02Un53W_t"
     },
     {
         id: 11,
@@ -96,8 +96,8 @@ const wallpapers = [
         category: "anime",
         resolution: "2560x1440",
         poster: "assets/posters/sakura_dreams.jpg",
-        thumbnail: "",
-        videoUrl: ""
+        thumbnail: "https://drive.google.com/uc?export=download&id=1UsTbvieQBiSD28enY1Zg2pah76hE9_Tp",
+        videoUrl: "https://drive.google.com/uc?export=download&id=1UsTbvieQBiSD28enY1Zg2pah76hE9_Tp"
     },
     {
         id: 12,
@@ -114,8 +114,8 @@ const wallpapers = [
         category: "anime",
         resolution: "1920x1080",
         poster: "assets/posters/dragon_ball_frame10.jpg",
-        thumbnail: "",
-        videoUrl: ""
+        thumbnail: "https://drive.google.com/uc?export=download&id=1RWlJJDuxVL0qGiduyM1J5GmbQiPMJ3RN",
+        videoUrl: "https://drive.google.com/uc?export=download&id=1RWlJJDuxVL0qGiduyM1J5GmbQiPMJ3RN"
     }
 ];
 
