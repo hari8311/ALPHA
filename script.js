@@ -105,8 +105,8 @@ const wallpapers = [
         category: "anime",
         resolution: "3840x2160",
         poster: "assets/posters/neon_tokyo.jpg",
-        thumbnail: "",
-        videoUrl: ""
+        thumbnail: "https://drive.google.com/uc?export=download&id=1gWE820hqCzxfWl_NXdDpW1s1Y7EM2CZH",
+        videoUrl: "https://drive.google.com/uc?export=download&id=1gWE820hqCzxfWl_NXdDpW1s1Y7EM2CZH"
     },
     {
         id: 13,
