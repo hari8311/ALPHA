@@ -124,13 +124,11 @@ function createWallpaperCard(wallpaper) {
     card.className = 'wallpaper-card';
     card.setAttribute('data-category', wallpaper.category);
 
-    const posterSrc = wallpaper.poster || 'assets/logo.jpg';
-    const posterAttr = `poster='${posterSrc}'`;
     const thumbnailUrl = wallpaper.thumbnail || wallpaper.videoUrl;
 
     card.innerHTML = `
         <div class="wallpaper-thumbnail">
-            <video ${posterAttr} muted playsinline preload="metadata" data-src="${thumbnailUrl}" loop crossorigin="anonymous" referrerpolicy="no-referrer"></video>
+            <video muted playsinline preload="metadata" data-src="${thumbnailUrl}" loop crossorigin="anonymous" referrerpolicy="no-referrer">#t=0.1</video>
         </div>
         <div class="wallpaper-info">
             <h3>${wallpaper.title}</h3>
@@ -157,27 +155,8 @@ function initWallpaperLazyPlayback() {
         cards.forEach(v => {
             const src = v.getAttribute('data-src');
             if (src) {
-                const sourceEl = document.createElement('source');
-                sourceEl.src = src;
-                sourceEl.type = 'video/mp4';
-                v.appendChild(sourceEl);
+                v.src = src;
                 v.load();
-                v.play().catch(()=>{});
-                
-                // Capture 3rd frame for poster
-                v.addEventListener('loadedmetadata', function captureFrame() {
-                    v.currentTime = 0.1; // 3rd frame at 30fps
-                }, { once: true });
-                
-                v.addEventListener('canplay', function onCanPlay() {
-                    const canvas = document.createElement('canvas');
-                    canvas.width = v.videoWidth;
-                    canvas.height = v.videoHeight;
-                    const ctx = canvas.getContext('2d');
-                    ctx.drawImage(v, 0, 0);
-                    v.poster = canvas.toDataURL('image/jpeg', 0.95);
-                    v.removeEventListener('canplay', onCanPlay);
-                }, { once: true });
             }
         });
         return;
@@ -189,28 +168,9 @@ function initWallpaperLazyPlayback() {
                 if (!video.dataset.loaded) {
                     const src = video.getAttribute('data-src');
                     if (src) {
-                        const sourceEl = document.createElement('source');
-                        sourceEl.src = src;
-                        sourceEl.type = 'video/mp4';
-                        video.appendChild(sourceEl);
+                        video.src = src;
                         video.dataset.loaded = 'true';
                         video.load();
-                        
-                        // Capture 3rd frame when metadata loads
-                        video.addEventListener('loadedmetadata', function captureFrame() {
-                            video.currentTime = 0.1; // 3rd frame at 30fps
-                        }, { once: true });
-                        
-                        // Set captured frame as poster
-                        video.addEventListener('canplay', function onCanPlay() {
-                            const canvas = document.createElement('canvas');
-                            canvas.width = video.videoWidth;
-                            canvas.height = video.videoHeight;
-                            const ctx = canvas.getContext('2d');
-                            ctx.drawImage(video, 0, 0);
-                            video.poster = canvas.toDataURL('image/jpeg', 0.95);
-                            video.removeEventListener('canplay', onCanPlay);
-                        }, { once: true });
                     }
                 }
                 video.play().catch(()=>{});
@@ -311,29 +271,6 @@ function openModal(wallpaper) {
     modalPlayer.src({
         src: wallpaper.videoUrl,
         type: 'video/mp4'
-    });
-    
-    // Capture 3rd frame and set as poster when video loads
-    modalPlayer.on('loadedmetadata', function() {
-        const video = modalVideo;
-        video.currentTime = 0.1; // 3rd frame at 30fps
-        
-        video.oncanplay = function() {
-            const canvas = document.createElement('canvas');
-            canvas.width = video.videoWidth;
-            canvas.height = video.videoHeight;
-            const ctx = canvas.getContext('2d');
-            ctx.drawImage(video, 0, 0);
-            
-            // Update poster attribute
-            const frameDataUrl = canvas.toDataURL('image/jpeg', 0.95);
-            modalVideo.poster = frameDataUrl;
-            
-            // Also update the wallpaper's poster property
-            wallpaper.poster = frameDataUrl;
-            
-            console.log(`✓ Captured 3rd frame for ${wallpaper.title}`);
-        };
     });
     
     // Handle errors
