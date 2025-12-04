@@ -6,8 +6,8 @@ const wallpapers = [
         category: "nature",
         resolution: "1920x1080",
         poster: "assets/posters/aurora.jpg",
-        thumbnail: "",
-        videoUrl: ""
+        thumbnail: "https://drive.google.com/uc?export=download&id=1HvrpTct8Qk1X-3o8CLRPfhwlz7LcMEv_",
+        videoUrl: "https://drive.google.com/uc?export=download&id=1HvrpTct8Qk1X-3o8CLRPfhwlz7LcMEv_"
     },
     {
         id: 2,
@@ -92,7 +92,7 @@ const wallpapers = [
     },
     {
         id: 11,
-        title: "Sakura Dreams",
+        title: "Sakura Tree",
         category: "anime",
         resolution: "2560x1440",
         poster: "assets/posters/sakura_dreams.jpg",
