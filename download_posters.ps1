@@ -1,26 +1,13 @@
-<#
-.SYNOPSIS
-Download poster images from Google Drive and save to assets/posters/
-
-.DESCRIPTION
-This script downloads all 13 poster images from the user's Google Drive folder
-and saves them locally. File IDs are pre-populated from poster_links/links.txt.
-
-.USAGE
-From project root (C:\Users\Hariprasath\Downloads\ALPHA):
-  .\download_posters.ps1
-#>
+# Download poster images from Google Drive
+# Usage: cd 'C:\Users\Hariprasath\Downloads\ALPHA'; .\download_posters.ps1
 
 Set-StrictMode -Version Latest
 
-# Ensure output directory exists
 $posterDir = Join-Path -Path $PSScriptRoot -ChildPath "assets/posters"
 if (-not (Test-Path $posterDir)) {
     New-Item -ItemType Directory -Path $posterDir -Force | Out-Null
-    Write-Host "Created directory: $posterDir" -ForegroundColor Green
 }
 
-# File IDs from user's Google Drive poster folder (poster_links/links.txt)
 $posters = @(
     @{ FileName = 'aurora.jpg'; FileId = '11TPfvjiWWfuvnFuq-WG1HoddJvpSR6cU' },
     @{ FileName = 'cosmic_waves.jpg'; FileId = '1HFe1eQrAnPQRM0TrX33ntphx61_yRHNK' },
@@ -41,77 +28,56 @@ $posters = @(
 )
 
 function Download-GDriveFile {
-    param(
-        [Parameter(Mandatory=$true)] [string] $FileId,
-        [Parameter(Mandatory=$true)] [string] $OutPath
-    )
-
+    param([string]$FileId, [string]$OutPath)
     $url = "https://drive.google.com/uc?export=download&id=$FileId"
-
     try {
         Invoke-WebRequest -Uri $url -OutFile $OutPath -UseBasicParsing -ErrorAction Stop
         return $true
     } catch {
-        Write-Warning "Download failed for FileId=$FileId : $_"
         return $false
     }
 }
 
-$downloaded = @()
-$failed = @()
+$downloaded = 0
+$failed = 0
 
-Write-Host "Downloading posters from Google Drive..." -ForegroundColor Cyan
+Write-Host "Downloading posters..." -ForegroundColor Cyan
 
 foreach ($p in $posters) {
-    $fileName = $p.FileName
-    $fileId = $p.FileId
-    $outPath = Join-Path $posterDir $fileName
-
-    Write-Host "  [$($posters.IndexOf($p)+1)/$($posters.Count)] Downloading $fileName ..."
-
-    $success = Download-GDriveFile -FileId $fileId -OutPath $outPath
+    $outPath = Join-Path $posterDir $p.FileName
+    $idx = $posters.IndexOf($p) + 1
+    
+    Write-Host "[$idx/$($posters.Count)] $($p.FileName)..." -NoNewline
+    
+    $success = Download-GDriveFile -FileId $p.FileId -OutPath $outPath
     
     if ($success -and (Test-Path $outPath)) {
         $size = (Get-Item $outPath).Length
         if ($size -gt 500) {
-            Write-Host "    ✓ Saved ($([math]::Round($size/1024,1)) KB)" -ForegroundColor Green
-            $downloaded += $outPath
+            Write-Host " OK ($([math]::Round($size/1024,1)) KB)" -ForegroundColor Green
+            $downloaded++
         } else {
-            Write-Warning "    ✗ File too small (likely HTML error page, not image)"
-            $failed += $fileName
+            Write-Host " SKIP (too small)" -ForegroundColor Yellow
             Remove-Item $outPath -Force -ErrorAction SilentlyContinue
+            $failed++
         }
     } else {
-        Write-Warning "    ✗ Download failed"
-        $failed += $fileName
+        Write-Host " FAIL" -ForegroundColor Red
+        $failed++
     }
 }
 
 Write-Host ""
-if ($downloaded.Count -gt 0) {
-    Write-Host "✓ Downloaded $($downloaded.Count) poster(s) successfully" -ForegroundColor Green
-} else {
-    Write-Host "✗ No files downloaded" -ForegroundColor Red
-}
+Write-Host "Results: $downloaded downloaded, $failed failed" -ForegroundColor Cyan
 
-if ($failed.Count -gt 0) {
-    Write-Host "✗ Failed: $($failed -join ', ')" -ForegroundColor Yellow
-}
-
-# Offer git commit
-$gitAvailable = (Get-Command git -ErrorAction SilentlyContinue) -ne $null
-if ($gitAvailable -and $downloaded.Count -gt 0) {
-    Write-Host ""
-    $doGit = Read-Host "Commit downloaded posters to git? (y/n)"
-    if ($doGit -match '^[Yy]') {
-        try {
+if ($downloaded -gt 0) {
+    $gitOk = (Get-Command git -ErrorAction SilentlyContinue) -ne $null
+    if ($gitOk) {
+        $ans = Read-Host "Commit to git? (y/n)"
+        if ($ans -match '^[Yy]') {
             git add -- "$posterDir\*"
-            git commit -m "Add poster images from Google Drive ($($downloaded.Count) files)"
-            Write-Host "✓ Committed to git (run 'git push' to upload)" -ForegroundColor Green
-        } catch {
-            Write-Warning "Git commit failed: $_"
+            git commit -m "Add $downloaded poster images"
+            Write-Host "Committed. Run 'git push' to upload." -ForegroundColor Green
         }
     }
 }
-
-Write-Host "Done. Posters are in $posterDir" -ForegroundColor Cyan
