@@ -116,6 +116,33 @@ const wallpapers = [
         poster: "assets/posters/dragon_ball_frame10.jpg",
         thumbnail: "https://drive.google.com/uc?export=download&id=1RWlJJDuxVL0qGiduyM1J5GmbQiPMJ3RN",
         videoUrl: "https://drive.google.com/uc?export=download&id=1RWlJJDuxVL0qGiduyM1J5GmbQiPMJ3RN"
+    },
+    {
+        id: 14,
+        title: "Goku Black Warrior",
+        category: "anime",
+        resolution: "1920x1080",
+        poster: "assets/posters/goku_black_warrior.jpg",
+        thumbnail: "https://drive.google.com/uc?export=download&id=1MVyh5BB8ZRWWsqfEC5vg7QLMMOpvUvRQ",
+        videoUrl: "https://drive.google.com/uc?export=download&id=1MVyh5BB8ZRWWsqfEC5vg7QLMMOpvUvRQ"
+    },
+    {
+        id: 15,
+        title: "Perfected Ultra Instinct",
+        category: "anime",
+        resolution: "1920x1080",
+        poster: "assets/posters/perfected_ultra_instinct.jpg",
+        thumbnail: "https://drive.google.com/uc?export=download&id=1lL_RVIb4mIIq4-yGQMIz1Za88-bieF5z",
+        videoUrl: "https://drive.google.com/uc?export=download&id=1lL_RVIb4mIIq4-yGQMIz1Za88-bieF5z"
+    },
+    {
+        id: 16,
+        title: "Son Goku DragonBall",
+        category: "anime",
+        resolution: "1920x1080",
+        poster: "assets/posters/son_goku_dragonball.jpg",
+        thumbnail: "https://drive.google.com/uc?export=download&id=1gfyuvJwThd6HGonHW-xTfau2zDuwdgYd",
+        videoUrl: "https://drive.google.com/uc?export=download&id=1gfyuvJwThd6HGonHW-xTfau2zDuwdgYd"
     }
 ];
 
@@ -129,7 +156,7 @@ function createWallpaperCard(wallpaper) {
 
     card.innerHTML = `
         <div class="wallpaper-thumbnail">
-            <video muted playsinline preload="metadata" data-src="${videoSrcWithFrame}" loop crossorigin="anonymous" referrerpolicy="no-referrer"></video>
+            <video muted playsinline preload="metadata" poster="${wallpaper.poster || 'assets/logo.jpg'}" data-src="${videoSrcWithFrame}" loop crossorigin="anonymous" referrerpolicy="no-referrer"></video>
         </div>
         <div class="wallpaper-info">
             <h3>${wallpaper.title}</h3>
