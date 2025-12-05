@@ -312,49 +312,36 @@ function openModal(wallpaper) {
         }
     }
     
-    // Create fresh Video.js player instance
-    modalPlayer = videojs(modalVideo, {
-        autoplay: true,
-        muted: true,
-        controls: true,
-        preload: 'auto',
-        fluid: true,
-        html5: {
-            vhs: {
-                overrideNative: true
-            },
-            nativeVideoTracks: false,
-            nativeAudioTracks: false,
-            nativeTextTracks: false
+    // Extract Google Drive file ID from URL
+    const fileIdMatch = wallpaper.videoUrl.match(/[?&]id=([^&]+)/);
+    if (fileIdMatch && fileIdMatch[1]) {
+        const fileId = fileIdMatch[1];
+        // Use Google Drive's embedded player
+        const embedUrl = `https://drive.google.com/file/d/${fileId}/preview`;
+        
+        // Replace video element with iframe
+        const modalBody = document.querySelector('.modal-body');
+        const existingIframe = modalBody.querySelector('iframe');
+        if (existingIframe) {
+            existingIframe.remove();
         }
-    });
-    
-    // Set video source
-    modalPlayer.src({
-        src: wallpaper.videoUrl,
-        type: 'video/mp4'
-    });
-    
-    // Set poster from wallpaper data
-    if (wallpaper.poster) {
-        modalPlayer.poster(wallpaper.poster);
+        
+        // Hide video element
+        modalVideo.style.display = 'none';
+        
+        // Create iframe for Google Drive player
+        const iframe = document.createElement('iframe');
+        iframe.src = embedUrl;
+        iframe.width = '100%';
+        iframe.height = '100%';
+        iframe.allow = 'autoplay';
+        iframe.style.border = 'none';
+        iframe.style.minHeight = '500px';
+        
+        modalBody.insertBefore(iframe, modalBody.firstChild);
+    } else {
+        alert('Invalid Google Drive URL format');
     }
-    
-    // Handle errors
-    modalPlayer.on('error', function() {
-        const error = modalPlayer.error();
-        console.error('Video error:', error);
-        if (error) {
-            alert(`Video playback error: ${error.message || 'Unknown error'}. Try downloading the file instead.`);
-        }
-    });
-    
-    // Auto-play when ready
-    modalPlayer.ready(function() {
-        modalPlayer.play().catch(function(err) {
-            console.log('Autoplay prevented:', err);
-        });
-    });
 }
 
 // Close modal
@@ -362,7 +349,17 @@ function closeModal() {
     modal.style.display = 'none';
     document.body.style.overflow = 'auto';
     
-    // Properly dispose Video.js player
+    // Remove iframe if exists
+    const modalBody = document.querySelector('.modal-body');
+    const iframe = modalBody.querySelector('iframe');
+    if (iframe) {
+        iframe.remove();
+    }
+    
+    // Show video element again
+    modalVideo.style.display = 'block';
+    
+    // Properly dispose Video.js player if exists
     if (modalPlayer) {
         try {
             modalPlayer.pause();
