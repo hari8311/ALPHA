@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://hari8311.github.io/ALPHA/sitemap.xml
