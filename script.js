@@ -329,29 +329,16 @@ function openModal(wallpaper) {
         }
     });
     
-    // Set video source with third frame as poster
-    const videoUrlWithFrame = wallpaper.videoUrl + '#t=0.1';
+    // Set video source
     modalPlayer.src({
-        src: videoUrlWithFrame,
+        src: wallpaper.videoUrl,
         type: 'video/mp4'
     });
     
-    // Capture third frame for poster
-    modalPlayer.on('loadeddata', function() {
-        modalPlayer.currentTime(0.1);
-    });
-    
-    modalPlayer.on('seeked', function() {
-        const video = modalVideo;
-        const canvas = document.createElement('canvas');
-        canvas.width = video.videoWidth;
-        canvas.height = video.videoHeight;
-        const ctx = canvas.getContext('2d');
-        ctx.drawImage(video, 0, 0);
-        video.poster = canvas.toDataURL('image/jpeg', 0.92);
-        console.log('✓ Captured third frame for', wallpaper.title);
-        modalPlayer.currentTime(0);
-    });
+    // Set poster from wallpaper data
+    if (wallpaper.poster) {
+        modalPlayer.poster(wallpaper.poster);
+    }
     
     // Handle errors
     modalPlayer.on('error', function() {
