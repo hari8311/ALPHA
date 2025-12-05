@@ -137,7 +137,7 @@ const wallpapers = [
     },
     {
         id: 16,
-        title: "Son Goku DragonBall",
+        title: "Son Goku",
         category: "anime",
         resolution: "1920x1080",
         poster: "assets/posters/son_goku_dragonball.jpg",
