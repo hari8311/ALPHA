@@ -312,10 +312,22 @@ function openModal(wallpaper) {
         }
     }
     
-    // Extract Google Drive file ID from URL
-    const fileIdMatch = wallpaper.videoUrl.match(/[?&]id=([^&]+)/);
-    if (fileIdMatch && fileIdMatch[1]) {
-        const fileId = fileIdMatch[1];
+    // Extract Google Drive file ID from URL (support both formats)
+    let fileId = null;
+    
+    // Try format: ?id=FILE_ID or &id=FILE_ID
+    const downloadMatch = wallpaper.videoUrl.match(/[?&]id=([^&]+)/);
+    if (downloadMatch && downloadMatch[1]) {
+        fileId = downloadMatch[1];
+    }
+    
+    // Try format: /file/d/FILE_ID/preview
+    const previewMatch = wallpaper.videoUrl.match(/\/file\/d\/([^\/]+)\//);
+    if (previewMatch && previewMatch[1]) {
+        fileId = previewMatch[1];
+    }
+    
+    if (fileId) {
         // Use Google Drive's embedded player
         const embedUrl = `https://drive.google.com/file/d/${fileId}/preview`;
         
