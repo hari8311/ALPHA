@@ -124,7 +124,7 @@ const wallpapers = [
         resolution: "1920x1080",
         poster: "assets/posters/goku_black_warrior.jpg",
         thumbnail: "https://drive.google.com/uc?export=download&id=1MVyh5BB8ZRWWsqfEC5vg7QLMMOpvUvRQ",
-        videoUrl: "https://drive.google.com/uc?export=download&id=1MVyh5BB8ZRWWsqfEC5vg7QLMMOpvUvRQ"
+        videoUrl: "https://drive.google.com/file/d/1MVyh5BB8ZRWWsqfEC5vg7QLMMOpvUvRQ/preview"
     },
     {
         id: 15,
@@ -133,7 +133,7 @@ const wallpapers = [
         resolution: "1920x1080",
         poster: "assets/posters/perfected_ultra_instinct.jpg",
         thumbnail: "https://drive.google.com/uc?export=download&id=1lL_RVIb4mIIq4-yGQMIz1Za88-bieF5z",
-        videoUrl: "https://drive.google.com/uc?export=download&id=1lL_RVIb4mIIq4-yGQMIz1Za88-bieF5z"
+        videoUrl: "https://drive.google.com/file/d/1lL_RVIb4mIIq4-yGQMIz1Za88-bieF5z/preview"
     },
     {
         id: 16,
@@ -142,7 +142,7 @@ const wallpapers = [
         resolution: "1920x1080",
         poster: "assets/posters/son_goku_dragonball.jpg",
         thumbnail: "https://drive.google.com/uc?export=download&id=1gfyuvJwThd6HGonHW-xTfau2zDuwdgYd",
-        videoUrl: "https://drive.google.com/uc?export=download&id=1gfyuvJwThd6HGonHW-xTfau2zDuwdgYd"
+        videoUrl: "https://drive.google.com/file/d/1gfyuvJwThd6HGonHW-xTfau2zDuwdgYd/preview"
     }
 ];
 
