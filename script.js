@@ -394,8 +394,17 @@ function downloadWallpaper() {
         return;
     }
     
+    // Extract file ID from the preview URL
+    const fileIdMatch = currentWallpaper.videoUrl.match(/\/file\/d\/([^\/]+)\//);
+    let downloadUrl = currentWallpaper.videoUrl;
+    
+    if (fileIdMatch && fileIdMatch[1]) {
+        // Convert preview URL to download URL
+        downloadUrl = `https://drive.google.com/uc?export=download&id=${fileIdMatch[1]}`;
+    }
+    
     const link = document.createElement('a');
-    link.href = currentWallpaper.videoUrl;
+    link.href = downloadUrl;
     link.download = `${currentWallpaper.title.replace(/\s+/g, '_')}.mp4`;
     link.target = '_blank';
     document.body.appendChild(link);
