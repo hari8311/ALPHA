@@ -7,7 +7,7 @@ const wallpapers = [
         resolution: "1920x1080",
         poster: "assets/posters/aurora.jpg",
         thumbnail: "https://drive.google.com/uc?export=download&id=1HvrpTct8Qk1X-3o8CLRPfhwlz7LcMEv_",
-        videoUrl: "https://drive.google.com/uc?export=download&id=1HvrpTct8Qk1X-3o8CLRPfhwlz7LcMEv_"
+        videoUrl: "https://drive.google.com/file/d/1HvrpTct8Qk1X-3o8CLRPfhwlz7LcMEv_/preview"
     },
     {
         id: 2,
@@ -16,7 +16,7 @@ const wallpapers = [
         resolution: "2560x1440",
         poster: "assets/posters/cosmic_waves.jpg",
         thumbnail: "https://drive.google.com/uc?export=download&id=1x0g8VkS6cU1bqDzJfdTgUM_7p6mHgpot",
-        videoUrl: "https://drive.google.com/uc?export=download&id=1x0g8VkS6cU1bqDzJfdTgUM_7p6mHgpot"
+        videoUrl: "https://drive.google.com/file/d/1x0g8VkS6cU1bqDzJfdTgUM_7p6mHgpot/preview"
     },
     {
         id: 3,
@@ -25,7 +25,7 @@ const wallpapers = [
         resolution: "3840x2160",
         poster: "assets/posters/galaxy_spiral.jpg",
         thumbnail: "https://drive.google.com/uc?export=download&id=1hP0O0PlJIAOE9oLnsSc1XZ0zbP7ba1bK",
-        videoUrl: "https://drive.google.com/uc?export=download&id=1hP0O0PlJIAOE9oLnsSc1XZ0zbP7ba1bK"
+        videoUrl: "https://drive.google.com/file/d/1hP0O0PlJIAOE9oLnsSc1XZ0zbP7ba1bK/preview"
     },
     {
         id: 4,
@@ -34,7 +34,7 @@ const wallpapers = [
         resolution: "1920x1080",
         poster: "assets/posters/ocean_waves.jpg",
         thumbnail: "https://drive.google.com/uc?export=download&id=11yMD0FwhjkJDGtDjso9bxZ7-m60dAEvk",
-        videoUrl: "https://drive.google.com/uc?export=download&id=11yMD0FwhjkJDGtDjso9bxZ7-m60dAEvk"
+        videoUrl: "https://drive.google.com/file/d/11yMD0FwhjkJDGtDjso9bxZ7-m60dAEvk/preview"
     },
     {
         id: 5,
@@ -43,7 +43,7 @@ const wallpapers = [
         resolution: "2560x1440",
         poster: "assets/posters/fluid_gradient.jpg",
         thumbnail: "https://drive.google.com/uc?export=download&id=1d3KTO8vWer20fUQ3a9Ujl7ZgX6uH0v_Q",
-        videoUrl: "https://drive.google.com/uc?export=download&id=1d3KTO8vWer20fUQ3a9Ujl7ZgX6uH0v_Q"
+        videoUrl: "https://drive.google.com/file/d/1d3KTO8vWer20fUQ3a9Ujl7ZgX6uH0v_Q/preview"
     },
     {
         id: 6,
@@ -52,7 +52,7 @@ const wallpapers = [
         resolution: "1920x1080",
         poster: "assets/posters/minimal_geometry.jpg",
         thumbnail: "https://drive.google.com/uc?export=download&id=1E9nfaeK_YDdlch2TMBA19r6fVhnpgi-I",
-        videoUrl: "https://drive.google.com/uc?export=download&id=1E9nfaeK_YDdlch2TMBA19r6fVhnpgi-I"
+        videoUrl: "https://drive.google.com/file/d/1E9nfaeK_YDdlch2TMBA19r6fVhnpgi-I/preview"
     },
     {
         id: 7,
@@ -61,7 +61,7 @@ const wallpapers = [
         resolution: "3840x2160",
         poster: "assets/posters/nebula_dream.jpg",
         thumbnail: "https://drive.google.com/uc?export=download&id=1HYy4BNEP2Aw36exNqQO9cQlsVh6YG0jq",
-        videoUrl: "https://drive.google.com/uc?export=download&id=1HYy4BNEP2Aw36exNqQO9cQlsVh6YG0jq"
+        videoUrl: "https://drive.google.com/file/d/1HYy4BNEP2Aw36exNqQO9cQlsVh6YG0jq/preview"
     },
     {
         id: 8,
@@ -70,7 +70,7 @@ const wallpapers = [
         resolution: "2560x1440",
         poster: "assets/posters/forest_rain.jpg",
         thumbnail: "https://drive.google.com/uc?export=download&id=11fIN1ijghmqmjvg5roD769oE1syrlK2C",
-        videoUrl: "https://drive.google.com/uc?export=download&id=11fIN1ijghmqmjvg5roD769oE1syrlK2C"
+        videoUrl: "https://drive.google.com/file/d/11fIN1ijghmqmjvg5roD769oE1syrlK2C/preview"
     },
     {
         id: 9,
@@ -79,7 +79,7 @@ const wallpapers = [
         resolution: "1920x1080",
         poster: "assets/posters/particle_flow.jpg",
         thumbnail: "https://drive.google.com/uc?export=download&id=16b5wx2jmqVTsV_WHOUC7V-AI2fAQpNH3",
-        videoUrl: "https://drive.google.com/uc?export=download&id=16b5wx2jmqVTsV_WHOUC7V-AI2fAQpNH3"
+        videoUrl: "https://drive.google.com/file/d/16b5wx2jmqVTsV_WHOUC7V-AI2fAQpNH3/preview"
     },
     {
         id: 10,
@@ -88,7 +88,7 @@ const wallpapers = [
         resolution: "1920x1080",
         poster: "assets/posters/anime_city_night.jpg",
         thumbnail: "https://drive.google.com/uc?export=download&id=1SPHbqi1P5rCQ2xeNRPRPalT02Un53W_t",
-        videoUrl: "https://drive.google.com/uc?export=download&id=1SPHbqi1P5rCQ2xeNRPRPalT02Un53W_t"
+        videoUrl: "https://drive.google.com/file/d/1SPHbqi1P5rCQ2xeNRPRPalT02Un53W_t/preview"
     },
     {
         id: 11,
@@ -97,7 +97,7 @@ const wallpapers = [
         resolution: "2560x1440",
         poster: "assets/posters/sakura_dreams.jpg",
         thumbnail: "https://drive.google.com/uc?export=download&id=1UsTbvieQBiSD28enY1Zg2pah76hE9_Tp",
-        videoUrl: "https://drive.google.com/uc?export=download&id=1UsTbvieQBiSD28enY1Zg2pah76hE9_Tp"
+        videoUrl: "https://drive.google.com/file/d/1UsTbvieQBiSD28enY1Zg2pah76hE9_Tp/preview"
     },
     {
         id: 12,
@@ -106,7 +106,7 @@ const wallpapers = [
         resolution: "3840x2160",
         poster: "assets/posters/neon_tokyo.jpg",
         thumbnail: "https://drive.google.com/uc?export=download&id=1gWE820hqCzxfWl_NXdDpW1s1Y7EM2CZH",
-        videoUrl: "https://drive.google.com/uc?export=download&id=1gWE820hqCzxfWl_NXdDpW1s1Y7EM2CZH"
+        videoUrl: "https://drive.google.com/file/d/1gWE820hqCzxfWl_NXdDpW1s1Y7EM2CZH/preview"
     },
     {
         id: 13,
@@ -115,7 +115,7 @@ const wallpapers = [
         resolution: "1920x1080",
         poster: "assets/posters/dragon_ball_frame10.jpg",
         thumbnail: "https://drive.google.com/uc?export=download&id=1RWlJJDuxVL0qGiduyM1J5GmbQiPMJ3RN",
-        videoUrl: "https://drive.google.com/uc?export=download&id=1RWlJJDuxVL0qGiduyM1J5GmbQiPMJ3RN"
+        videoUrl: "https://drive.google.com/file/d/1RWlJJDuxVL0qGiduyM1J5GmbQiPMJ3RN/preview"
     },
     {
         id: 14,
@@ -123,8 +123,8 @@ const wallpapers = [
         category: "anime",
         resolution: "1920x1080",
         poster: "assets/posters/goku_black_warrior.jpg",
-        thumbnail: "https://drive.google.com/uc?export=download&id=1MVyh5BB8ZRWWsqfEC5vg7QLMMOpvUvRQ",
-        videoUrl: "https://drive.google.com/file/d/1MVyh5BB8ZRWWsqfEC5vg7QLMMOpvUvRQ/preview"
+        thumbnail: "https://drive.google.com/uc?export=download&id=1__5AJ64fd03vJ0sw7KofjxBCz35_4lM-",
+        videoUrl: "https://drive.google.com/file/d/1__5AJ64fd03vJ0sw7KofjxBCz35_4lM-/preview"
     },
     {
         id: 15,
@@ -132,8 +132,8 @@ const wallpapers = [
         category: "anime",
         resolution: "1920x1080",
         poster: "assets/posters/perfected_ultra_instinct.jpg",
-        thumbnail: "https://drive.google.com/uc?export=download&id=1lL_RVIb4mIIq4-yGQMIz1Za88-bieF5z",
-        videoUrl: "https://drive.google.com/file/d/1lL_RVIb4mIIq4-yGQMIz1Za88-bieF5z/preview"
+        thumbnail: "https://drive.google.com/uc?export=download&id=1uTzX5Dz8g7pz7KDCf48xmc1b6947EeZA",
+        videoUrl: "https://drive.google.com/file/d/1uTzX5Dz8g7pz7KDCf48xmc1b6947EeZA/preview"
     },
     {
         id: 16,
@@ -141,8 +141,8 @@ const wallpapers = [
         category: "anime",
         resolution: "1920x1080",
         poster: "assets/posters/son_goku_dragonball.jpg",
-        thumbnail: "https://drive.google.com/uc?export=download&id=1gfyuvJwThd6HGonHW-xTfau2zDuwdgYd",
-        videoUrl: "https://drive.google.com/file/d/1gfyuvJwThd6HGonHW-xTfau2zDuwdgYd/preview"
+        thumbnail: "https://drive.google.com/uc?export=download&id=17XsF1gJSGuAWJ1WuJOW5Nuu4uLX8NHIy",
+        videoUrl: "https://drive.google.com/file/d/17XsF1gJSGuAWJ1WuJOW5Nuu4uLX8NHIy/preview"
     }
 ];
 
