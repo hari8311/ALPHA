@@ -396,23 +396,25 @@ function downloadWallpaper() {
     
     // Extract file ID from the preview URL
     const fileIdMatch = currentWallpaper.videoUrl.match(/\/file\/d\/([^\/]+)\//);
-    let downloadUrl = currentWallpaper.videoUrl;
     
     if (fileIdMatch && fileIdMatch[1]) {
-        // Convert preview URL to download URL
-        downloadUrl = `https://drive.google.com/uc?export=download&id=${fileIdMatch[1]}`;
+        const fileId = fileIdMatch[1];
+        // Create download URL
+        const downloadUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
+        
+        // Create hidden link and trigger download
+        const link = document.createElement('a');
+        link.href = downloadUrl;
+        link.download = `${currentWallpaper.title.replace(/\s+/g, '_')}.mp4`;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        
+        // Show download notification
+        showNotification('Download started!');
+    } else {
+        alert('Invalid video URL format');
     }
-    
-    const link = document.createElement('a');
-    link.href = downloadUrl;
-    link.download = `${currentWallpaper.title.replace(/\s+/g, '_')}.mp4`;
-    link.target = '_blank';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    
-    // Show download notification
-    showNotification('Download started!');
 }
 
 // Show notification
